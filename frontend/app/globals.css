@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-lab-bg: #FFDAD6;
+  --color-lab-text: #1a1a1a;
+  --color-lab-accent: #8B4513;
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFDAD6 !important;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+    color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+  }
+}

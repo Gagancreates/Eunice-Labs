@@ -179,7 +179,7 @@ const App: React.FC = () => {
       {/* Footer */}
       <footer className="py-12 text-center border-t border-white/20">
         <p className="font-serif text-lab-text/60 italic mb-2">
-          "Chance favors the prepared mind."
+          "Purpose of Knowledge is Application "
         </p>
         <p className="font-sans text-xs text-lab-text/40 tracking-widest uppercase">
           Built in the open. MIT Licensed. © {new Date().getFullYear()} Eunice Labs.

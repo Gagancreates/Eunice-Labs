@@ -88,7 +88,7 @@ const App: React.FC = () => {
             Eunice Labs is an independent research initiative focused on the practical and philosophical implications of Large Language Models. In a world rushing towards AGI, we believe there is immense value in slowing down to understand the fundamental building blocks of cognition.
           </p>
           <p className="mb-6">
-            Run by <a href="https://gaganp.com" target="_blank" rel="noopener noreferrer" className="border-b border-lab-accent/30 hover:border-lab-accent hover:text-lab-accent transition-colors">Gagan</a>, this lab represents a commitment to "learning in public." There are no corporate KPIs here, only the pursuit of interesting questions. How do models reason? How can we give them reliable agency? What happens when software can write itself?
+            Run by <a href="https://gaganp.com" target="_blank" rel="noopener noreferrer" className="border-b border-lab-accent/30 hover:border-lab-accent hover:text-lab-accent transition-colors">Gagan</a>, this lab represents a commitment to &quot;learning in public.&quot; There are no corporate KPIs here, only the pursuit of interesting questions. How do models reason? How can we give them reliable agency? What happens when software can write itself?
           </p>
           <p>
             Our philosophy is simple: Everything is open source. Knowledge should be free. The best way to learn is to build tools that break, fix them, and document the process.
@@ -104,7 +104,7 @@ const App: React.FC = () => {
           </p>
           <div className="h-px w-20 bg-lab-accent/20 mb-6"></div>
           <p className="font-sans text-lab-text/70 leading-relaxed max-w-2xl">
-            Beyond the hype, we are investigating rigorous benchmarks for agentic behavior and building modular libraries for prompt optimization. The goal is to move from "it works sometimes" to "it works predictably."
+            Beyond the hype, we are investigating rigorous benchmarks for agentic behavior and building modular libraries for prompt optimization. The goal is to move from &quot;it works sometimes&quot; to &quot;it works predictably.&quot;
           </p>
         </div>
       </Section>
@@ -179,7 +179,7 @@ const App: React.FC = () => {
       {/* Footer */}
       <footer className="py-12 text-center border-t border-white/20">
         <p className="font-serif text-lab-text/60 italic mb-2">
-          "Purpose of Knowledge is Application "
+          &quot;Purpose of Knowledge is Application&quot;
         </p>
         <p className="font-sans text-xs text-lab-text/40 tracking-widest uppercase">
           Built in the open. MIT Licensed. © {new Date().getFullYear()} Eunice Labs.

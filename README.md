@@ -6,14 +6,6 @@ An independent research initiative exploring the frontiers of synthetic intellig
 
 Eunice Labs focuses on the practical and philosophical implications of Large Language Models. Current areas of interest include multi-agent systems, tool calling reliability, and prompt optimization.
 
-## Tech Stack
-
-- Next.js 16
-- React 19
-- Tailwind CSS v4
-- Framer Motion
-- TypeScript
-
 ## Getting Started
 
 ```bash

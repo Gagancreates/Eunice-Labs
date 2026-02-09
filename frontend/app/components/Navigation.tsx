@@ -37,6 +37,7 @@ const Navigation: React.FC = () => {
   const links = [
     { name: 'About', href: '#about' },
     { name: 'Focus', href: '#focus' },
+    { name: 'Foundations', href: '#foundations' },
     { name: 'Experiments', href: '#experiments' },
     { name: 'Resources', href: '#resources' },
     { name: 'Connect', href: '#connect' },

@@ -4,9 +4,11 @@ import React from 'react';
 import Navigation from './components/Navigation';
 import Section from './components/Section';
 import ExperimentCard from './components/ExperimentCard';
+import BlogCard from './components/BlogCard';
 import { Experiment, Resource } from './types';
 import { Github, Mail, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { blogPosts } from './lib/blogs';
 
 const experiments: Experiment[] = [
   {
@@ -109,10 +111,29 @@ const App: React.FC = () => {
         </div>
       </Section>
 
+      {/* Foundations - Blog Section */}
+      <Section id="foundations" title="Foundations">
+        <div className="mb-12">
+          <p className="font-serif text-2xl md:text-3xl text-lab-text/90 leading-relaxed mb-4">
+            From attention mechanisms to transformers
+          </p>
+          <div className="h-px w-20 bg-lab-accent/20 mb-4"></div>
+          <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl">
+            Before building agents and optimizing prompts, we need to understand the foundations. This series traces the evolution of neural sequence modeling—from basic seq2seq to the attention revolution that powers modern LLMs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {blogPosts.map((post, index) => (
+            <BlogCard key={post.slug} post={post} index={index} />
+          ))}
+        </div>
+      </Section>
+
       {/* Experiments */}
       <section id="experiments" className="py-20 md:py-32 px-6 scroll-mt-24">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -120,7 +141,7 @@ const App: React.FC = () => {
           >
             Experiments
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {experiments.map((exp, index) => (
               <ExperimentCard key={exp.id} experiment={exp} index={index} />

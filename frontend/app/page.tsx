@@ -40,24 +40,38 @@ const experiments: Experiment[] = [
 const resources: Resource[] = [
   {
     id: '1',
-    title: 'The Agentic Workflow Manifesto',
+    title: 'Attention is All You Need',
     type: 'Paper',
-    description: 'Foundational reading on why loops and tools beat raw zero-shot intelligence.',
-    url: '#'
+    description: 'The foundational 2017 paper by Vaswani et al. that introduced the Transformer architecture.',
+    url: 'https://arxiv.org/abs/1706.03762'
   },
   {
     id: '2',
-    title: 'LiteLLM Proxy Configs',
-    type: 'Tool',
-    description: 'My personal configuration setups for routing between Gemini, Claude, and GPT-4 cost-effectively.',
-    url: '#'
+    title: 'Neural Machine Translation by Jointly Learning to Align and Translate',
+    type: 'Paper',
+    description: 'Bahdanau et al. (2015) - The paper that introduced attention mechanisms to seq2seq models.',
+    url: 'https://arxiv.org/abs/1409.0473'
   },
   {
     id: '3',
-    title: 'Synthetic Reasoning Dataset v1',
-    type: 'Dataset',
-    description: '10k examples of chain-of-thought failures and corrections.',
-    url: '#'
+    title: 'Effective Approaches to Attention-based Neural Machine Translation',
+    type: 'Paper',
+    description: 'Luong et al. (2015) - Introduced global and local attention variants for improved efficiency.',
+    url: 'https://arxiv.org/abs/1508.04025'
+  },
+  {
+    id: '4',
+    title: 'The Annotated Transformer',
+    type: 'Tutorial',
+    description: 'Harvard NLP\'s line-by-line implementation guide with detailed explanations and code.',
+    url: 'http://nlp.seas.harvard.edu/annotated-transformer/'
+  },
+  {
+    id: '5',
+    title: 'Deep Learning Implementation',
+    type: 'Code',
+    description: 'PyTorch implementations of all architectures covered in the Foundations series.',
+    url: 'https://github.com/Gagancreates/Deep-Learning-Implementation'
   }
 ];
 
@@ -113,13 +127,22 @@ const App: React.FC = () => {
 
       {/* Foundations - Blog Section */}
       <Section id="foundations" title="Foundations">
+        <div className="bg-white/50 p-6 md:p-8 mb-12 border-l-4 border-lab-accent/30">
+          <p className="font-sans text-lab-text/80 leading-relaxed max-w-4xl">
+            Deep technical explorations of the architectures that power modern AI. Each post combines theory, mathematics, diagrams, and production-ready PyTorch code—breaking down complex concepts into buildable components.
+          </p>
+        </div>
+
         <div className="mb-12">
           <p className="font-serif text-2xl md:text-3xl text-lab-text/90 leading-relaxed mb-4">
             From attention mechanisms to transformers
           </p>
           <div className="h-px w-20 bg-lab-accent/20 mb-4"></div>
-          <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl">
+          <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl mb-4">
             Before building agents and optimizing prompts, we need to understand the foundations. This series traces the evolution of neural sequence modeling—from basic seq2seq to the attention revolution that powers modern LLMs.
+          </p>
+          <p className="font-sans text-lab-text/60 leading-relaxed max-w-3xl text-sm">
+            Each post includes mathematical explanations, architectural diagrams, and PyTorch implementations. Topics progress from encoder-decoder architectures through Bahdanau and Luong attention mechanisms, culminating in the complete Transformer architecture from "Attention is All You Need."
           </p>
         </div>
 
@@ -154,8 +177,11 @@ const App: React.FC = () => {
       <Section id="resources" title="Resources">
         <div className="space-y-6">
           {resources.map((resource, idx) => (
-            <motion.div 
+            <motion.a
               key={resource.id}
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -176,7 +202,7 @@ const App: React.FC = () => {
               <div className="flex items-center text-xs font-semibold text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
                 Access Resource <ArrowUpRight size={12} className="ml-1" />
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </Section>

@@ -65,7 +65,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h2 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 2.25rem;
+          font-size: 1.5rem;
           line-height: 1.3;
           margin-top: 2.5rem;
           margin-bottom: 1rem;
@@ -75,33 +75,57 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           letter-spacing: -0.01em;
         }
 
+        @media (min-width: 768px) {
+          .markdown-content h2 {
+            font-size: 2.25rem;
+          }
+        }
+
         .markdown-content h3 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 1.65rem;
+          font-size: 1.1rem;
           line-height: 1.4;
           margin-top: 2rem;
           margin-bottom: 0.75rem;
           color: #3d3d3d;
         }
 
+        @media (min-width: 768px) {
+          .markdown-content h3 {
+            font-size: 1.65rem;
+          }
+        }
+
         .markdown-content h4 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 500;
-          font-size: 1.25rem;
+          font-size: 1.05rem;
           line-height: 1.4;
           margin-top: 2em;
           margin-bottom: 0.5em;
           color: #4d4d4d;
         }
 
+        @media (min-width: 768px) {
+          .markdown-content h4 {
+            font-size: 1.25rem;
+          }
+        }
+
         /* PARAGRAPHS */
         .markdown-content p {
           @apply font-sans;
-          font-size: 1.0625rem;
+          font-size: 0.9375rem;
           line-height: 1.8;
           margin-bottom: 1.25rem;
           color: #3d3d3d;
+        }
+
+        @media (min-width: 768px) {
+          .markdown-content p {
+            font-size: 1.0625rem;
+          }
         }
 
         /* STRONG & EM */
@@ -138,9 +162,15 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           background: transparent;
           color: #cdd6f4;
           padding: 0;
-          font-size: 0.95rem;
+          font-size: 0.8rem;
           line-height: 1.6;
           border-radius: 0;
+        }
+
+        @media (min-width: 768px) {
+          .markdown-content pre code {
+            font-size: 0.95rem;
+          }
         }
 
         /* LISTS */
@@ -149,8 +179,15 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           @apply font-sans;
           margin: 1.5rem 0;
           padding-left: 1.5em;
-          font-size: 1.0625rem;
+          font-size: 0.9375rem;
           line-height: 1.8;
+        }
+
+        @media (min-width: 768px) {
+          .markdown-content ul,
+          .markdown-content ol {
+            font-size: 1.0625rem;
+          }
         }
 
         .markdown-content ul {

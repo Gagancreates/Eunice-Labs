@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd blog section, Foundations content, and UI polish\n\n- Add Foundations blog section with 5 deep learning posts\n- Integrate react-markdown with KaTeX and syntax highlighting\n- Obsidian-style markdown rendering with EB Garamond headings\n- Add real resources \\(papers, tutorials, GitHub repo\\)\n- Fix blog page background to use landing page grid\n- Reduce mobile h1 size for better readability\n- Remove duplicate headings and meta tags from blog pages\nEOF\n\\)\")",
+      "Bash(git push:*)"
+    ]
+  }
+}

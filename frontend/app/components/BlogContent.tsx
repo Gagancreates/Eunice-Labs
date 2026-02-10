@@ -35,7 +35,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h1 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 700;
-          font-size: 3.5rem;
+          font-size: 2.25rem;
           line-height: 1.1;
           margin-top: 1em;
           margin-bottom: 0.5em;

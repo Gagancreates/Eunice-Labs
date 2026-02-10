@@ -64,7 +64,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   // No parsing needed - react-markdown handles it
 
   return (
-    <div className="min-h-screen bg-[#FFDAD6] text-lab-text">
+    <div className="min-h-screen text-lab-text">
       {/* Header */}
       <header className="border-b border-white/20 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-6 py-4">

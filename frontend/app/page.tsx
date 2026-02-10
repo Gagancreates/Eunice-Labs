@@ -66,13 +66,10 @@ const App: React.FC = () => {
       <Section id="about" title="The Lab">
         <div className="font-sans text-lg md:text-xl text-lab-text/80 leading-relaxed max-w-none">
           <p className="mb-6 first-letter:text-5xl first-letter:font-serif first-letter:mr-2 first-letter:float-left first-letter:text-lab-accent">
-            Eunice Labs is an independent research initiative focused on the practical and philosophical implications of Large Language Models. In a world rushing towards AGI, we believe there is immense value in slowing down to understand the fundamental building blocks of cognition.
-          </p>
-          <p className="mb-6">
-            Run by <a href="https://gaganp.com" target="_blank" rel="noopener noreferrer" className="border-b border-lab-accent/30 hover:border-lab-accent hover:text-lab-accent transition-colors">Gagan</a>, this lab represents a commitment to &quot;learning in public.&quot; There are no corporate KPIs here, only the pursuit of interesting questions. How do models reason? How can we give them reliable agency? What happens when software can write itself?
+            Eunice Labs is an independent AI research initiative run by <a href="https://gaganp.com" target="_blank" rel="noopener noreferrer" className="border-b border-lab-accent/30 hover:border-lab-accent hover:text-lab-accent transition-colors">Gagan</a>, focused on understanding how large language models actually work — particularly their reasoning capabilities, agent reliability, and self-modifying systems.
           </p>
           <p>
-            Our philosophy is simple: Everything is open source. Knowledge should be free. The best way to learn is to build tools that break, fix them, and document the process.
+            Everything we build is open source. Documenting what works (and what breaks). The goal is simple: push the boundaries of what&apos;s possible with LLMs while making the research accessible to everyone.
           </p>
         </div>
       </Section>

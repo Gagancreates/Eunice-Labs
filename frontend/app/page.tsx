@@ -5,10 +5,12 @@ import Navigation from './components/Navigation';
 import Section from './components/Section';
 import ExperimentCard from './components/ExperimentCard';
 import BlogCard from './components/BlogCard';
-import { Experiment, Resource } from './types';
+import { Experiment } from './types';
 import { Github, Mail, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { blogPosts } from './lib/blogs';
+import { featuredResources } from './lib/resources';
+import Link from 'next/link';
 
 const experiments: Experiment[] = [
   {
@@ -37,43 +39,6 @@ const experiments: Experiment[] = [
   }
 ];
 
-const resources: Resource[] = [
-  {
-    id: '1',
-    title: 'Attention is All You Need',
-    type: 'Paper',
-    description: 'The foundational 2017 paper by Vaswani et al. that introduced the Transformer architecture.',
-    url: 'https://arxiv.org/abs/1706.03762'
-  },
-  {
-    id: '2',
-    title: 'Neural Machine Translation by Jointly Learning to Align and Translate',
-    type: 'Paper',
-    description: 'Bahdanau et al. (2015) - The paper that introduced attention mechanisms to seq2seq models.',
-    url: 'https://arxiv.org/abs/1409.0473'
-  },
-  {
-    id: '3',
-    title: 'Effective Approaches to Attention-based Neural Machine Translation',
-    type: 'Paper',
-    description: 'Luong et al. (2015) - Introduced global and local attention variants for improved efficiency.',
-    url: 'https://arxiv.org/abs/1508.04025'
-  },
-  {
-    id: '4',
-    title: 'The Annotated Transformer',
-    type: 'Tutorial',
-    description: 'Harvard NLP\'s line-by-line implementation guide with detailed explanations and code.',
-    url: 'http://nlp.seas.harvard.edu/annotated-transformer/'
-  },
-  {
-    id: '5',
-    title: 'Deep Learning Implementation',
-    type: 'Code',
-    description: 'PyTorch implementations of all architectures covered in the Foundations series.',
-    url: 'https://github.com/Gagancreates/Deep-Learning-Implementation'
-  }
-];
 
 const App: React.FC = () => {
   return (
@@ -175,8 +140,14 @@ const App: React.FC = () => {
 
       {/* Resources */}
       <Section id="resources" title="Resources">
+        <div className="bg-white/50 p-6 md:p-8 mb-10 border-l-4 border-lab-accent/30">
+          <p className="font-sans text-lab-text/80 leading-relaxed max-w-4xl">
+            Important papers I have read and GitHub repos which contain code implementations — spanning foundational architectures, reasoning techniques, and model compression.
+          </p>
+        </div>
+
         <div className="space-y-6">
-          {resources.map((resource, idx) => (
+          {featuredResources.map((resource, idx) => (
             <motion.a
               key={resource.id}
               href={resource.url}
@@ -205,6 +176,21 @@ const App: React.FC = () => {
             </motion.a>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-10 text-center"
+        >
+          <Link
+            href="/resources"
+            className="inline-flex items-center gap-2 font-sans text-sm font-semibold text-lab-accent border border-lab-accent/30 px-6 py-3 hover:bg-lab-accent hover:text-white transition-all"
+          >
+            View All Resources <ArrowUpRight size={14} />
+          </Link>
+        </motion.div>
       </Section>
 
       {/* Connect */}

@@ -5,7 +5,7 @@ import { blogPosts } from '../lib/blogs';
 import BlogCard from '../components/BlogCard';
 
 export const metadata = {
-  title: 'Blog | Eunice Labs',
+  title: 'Blogs | Eunice Labs',
   description: 'Deep technical explorations of the architectures that power modern AI.',
 };
 
@@ -30,24 +30,9 @@ export default function BlogPage() {
         {/* Page header */}
         <div className="mb-16">
           <h1 className="font-serif text-5xl md:text-6xl text-lab-text mb-6 tracking-tight">
-            Foundations
+            Blogs
           </h1>
-          <div className="h-px w-20 bg-lab-accent/20 mb-8" />
-          <div className="bg-white/50 p-6 md:p-8 border-l-4 border-lab-accent/30 max-w-3xl">
-            <p className="font-sans text-lab-text/80 leading-relaxed">
-              Deep technical explorations of the architectures that power modern AI. Each post combines theory, mathematics, diagrams, and production-ready PyTorch code — breaking down complex concepts into buildable components.
-            </p>
-          </div>
-        </div>
-
-        {/* Series intro */}
-        <div className="mb-12">
-          <p className="font-serif text-2xl md:text-3xl text-lab-text/90 leading-relaxed mb-4">
-            From attention mechanisms to transformers
-          </p>
-          <p className="font-sans text-lab-text/60 leading-relaxed max-w-3xl text-sm">
-            This series traces the evolution of neural sequence modeling — from basic seq2seq to the attention revolution that powers modern LLMs. Topics progress from encoder-decoder architectures through Bahdanau and Luong attention mechanisms, culminating in the complete Transformer architecture from &ldquo;Attention is All You Need.&rdquo;
-          </p>
+          <div className="h-px w-20 bg-lab-accent/20" />
         </div>
 
         {/* Blog grid */}

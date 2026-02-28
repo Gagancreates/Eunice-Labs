@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +43,7 @@ const Navigation: React.FC = () => {
     { name: 'Foundations', href: '#foundations' },
     { name: 'Experiments', href: '#experiments' },
     { name: 'Resources', href: '#resources' },
+    { name: 'Blogs', href: '/blog' },
     { name: 'Connect', href: '#connect' },
   ];
 
@@ -62,16 +64,26 @@ const Navigation: React.FC = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
-          {links.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-medium font-sans uppercase tracking-widest border-b transition-all pb-0.5 cursor-pointer text-lab-text/80 hover:text-lab-accent border-transparent hover:border-lab-accent"
-            >
-              {link.name}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium font-sans uppercase tracking-widest border-b transition-all pb-0.5 cursor-pointer text-lab-text/80 hover:text-lab-accent border-transparent hover:border-lab-accent"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-sm font-medium font-sans uppercase tracking-widest border-b transition-all pb-0.5 cursor-pointer text-lab-text/80 hover:text-lab-accent border-transparent hover:border-lab-accent"
+              >
+                {link.name}
+              </a>
+            )
+          )}
         </nav>
 
         {/* Mobile Toggle */}
@@ -93,16 +105,27 @@ const Navigation: React.FC = () => {
             className="md:hidden bg-[#FFDAD6] border-b border-white/20 overflow-hidden"
           >
             <nav className="flex flex-col p-6 space-y-4">
-              {links.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.href} 
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-lg font-serif block cursor-pointer text-lab-text hover:text-lab-accent"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {links.map((link) =>
+                link.href.startsWith('/') ? (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-lg font-serif block cursor-pointer text-lab-text hover:text-lab-accent"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="text-lg font-serif block cursor-pointer text-lab-text hover:text-lab-accent"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
             </nav>
           </motion.div>
         )}

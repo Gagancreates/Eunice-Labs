@@ -23,6 +23,9 @@ const ExperimentCard: React.FC<ExperimentCardProps> = ({ experiment, index }) =>
         <span className="text-xs font-sans font-semibold tracking-wider text-lab-accent bg-lab-accent/5 px-2 py-1 rounded-sm uppercase">
           {experiment.date}
         </span>
+        <span className="text-xs font-sans font-semibold tracking-wider text-amber-600 bg-amber-50 border border-amber-200 px-2 py-1 rounded-sm uppercase">
+          Coming Soon
+        </span>
       </div>
       
       <h3 className="font-serif text-2xl text-lab-text mb-3 group-hover:text-lab-accent transition-colors">

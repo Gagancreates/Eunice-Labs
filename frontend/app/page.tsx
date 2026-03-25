@@ -15,6 +15,14 @@ import Link from 'next/link';
 const experiments: Experiment[] = [
   {
     id: '1',
+    title: 'Deep Learning & LLMs — Interactive',
+    date: 'Live',
+    description: 'An interactive learning path from tensors to Transformers. 8 lessons with live visualisations, playgrounds, and conceptual quizzes. Built to make the foundations of modern AI tangible.',
+    tags: ['education', 'interactive', 'open-source'],
+    link: '/learn'
+  },
+  {
+    id: '2',
     title: 'Tool Calling Benchmark Suite',
     date: 'Coming Soon',
     description: 'A comprehensive evaluation framework specifically designed to test the reliability, accuracy, and edge-case handling of LLM function calling capabilities across diverse domains.',
@@ -22,19 +30,11 @@ const experiments: Experiment[] = [
     link: '#'
   },
   {
-    id: '2',
+    id: '3',
     title: 'Agent Memory Patterns',
     date: 'Research',
     description: 'Exploring novel architectures for long-term memory in autonomous agents. Investigating vector retrieval hierarchies vs. summary compression techniques for maintaining coherent persona state.',
     tags: ['memory', 'architecture', 'research'],
-    link: '#'
-  },
-  {
-    id: '3',
-    title: 'Prompt Engineering Library',
-    date: 'Alpha',
-    description: 'An open-source collection of highly optimized system prompts and few-shot examples for common reasoning tasks. Built to be modular, versioned, and easily integrated into Python codebases.',
-    tags: ['prompts', 'open-source', 'utils'],
     link: '#'
   }
 ];

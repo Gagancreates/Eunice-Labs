@@ -6,6 +6,13 @@
   --color-lab-accent: #8B4513;
   --font-serif: "EB Garamond", serif;
   --font-sans: "Inter", sans-serif;
+
+  /* Learn section (dark theme) */
+  --color-background: #0a0a0a;
+  --color-foreground: #e5e5e5;
+  --color-muted: #737373;
+  --color-border: #262626;
+  --color-accent: #ffffff;
 }
 
 @layer base {

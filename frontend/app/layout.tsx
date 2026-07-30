@@ -15,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eunicelabs.com"),
   title: "Eunice Labs",
   description: "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation.",
 };

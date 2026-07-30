@@ -17,17 +17,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://eunicelabs.com"),
   title: {
-    default: "Eunice Labs — Deep Learning Experiments & Interactive Lessons",
+    default: "Eunice Labs — Interactive Deep Learning Lessons & AI Blogs",
     template: "%s | Eunice Labs",
   },
   description:
-    "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation. Interactive deep learning lessons, technical deep-dives on attention and Transformers, and AI experiments.",
+    "Interactive deep learning lessons, technical deep-dives on attention and Transformers, and curiosity-driven AI experiments from Eunice Labs.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
     siteName: "Eunice Labs",
-    title: "Eunice Labs — Deep Learning Experiments & Interactive Lessons",
+    title: "Eunice Labs — Interactive Deep Learning Lessons & AI Blogs",
     description:
       "Interactive deep learning lessons, technical deep-dives on attention and Transformers, and AI experiments.",
   },

@@ -17,19 +17,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://eunicelabs.com"),
   title: {
-    default: "Eunice Labs — Interactive Deep Learning Lessons & AI Blogs",
+    default: "Eunice Labs — AI Research & Experiments",
     template: "%s | Eunice Labs",
   },
   description:
-    "Interactive deep learning lessons, technical deep-dives on attention and Transformers, and curiosity-driven AI experiments from Eunice Labs.",
+    "Eunice Labs is an independent AI research lab exploring the frontiers of synthetic intelligence through experiments, publications and first-principles systems.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
     siteName: "Eunice Labs",
-    title: "Eunice Labs — Interactive Deep Learning Lessons & AI Blogs",
+    title: "Eunice Labs — AI Research & Experiments",
     description:
-      "Interactive deep learning lessons, technical deep-dives on attention and Transformers, and AI experiments.",
+      "Eunice Labs is an independent AI research lab exploring the frontiers of synthetic intelligence through experiments, technical publications and systems built from first principles.",
   },
   twitter: {
     card: "summary_large_image",
@@ -42,7 +42,7 @@ const websiteJsonLd = {
   name: "Eunice Labs",
   url: "https://eunicelabs.com",
   description:
-    "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation.",
+    "Eunice Labs is an independent AI research lab exploring the frontiers of synthetic intelligence through experiments, technical publications and systems built from first principles.",
 };
 
 export default function RootLayout({

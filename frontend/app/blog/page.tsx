@@ -5,11 +5,11 @@ import { blogPosts } from '../lib/blogs';
 import BlogCard from '../components/BlogCard';
 
 export const metadata = {
-  title: 'Blogs',
+  title: 'Writings',
   description: 'Deep technical explorations of the architectures that power modern AI — seq2seq, attention mechanisms, and Transformers.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'Blogs | Eunice Labs',
+    title: 'Writings | Eunice Labs',
     description: 'Deep technical explorations of the architectures that power modern AI.',
     url: '/blog',
     images: ['/opengraph-image.png'],
@@ -37,7 +37,7 @@ export default function BlogPage() {
         {/* Page header */}
         <div className="mb-16">
           <h1 className="font-serif text-5xl md:text-6xl text-lab-text mb-6 tracking-tight">
-            Blogs
+            Writings
           </h1>
           <div className="h-px w-20 bg-lab-accent/20" />
         </div>

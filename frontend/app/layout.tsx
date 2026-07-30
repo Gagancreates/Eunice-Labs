@@ -16,8 +16,33 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eunicelabs.com"),
-  title: "Eunice Labs",
-  description: "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation.",
+  title: {
+    default: "Eunice Labs — Deep Learning Experiments & Interactive Lessons",
+    template: "%s | Eunice Labs",
+  },
+  description:
+    "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation. Interactive deep learning lessons, technical deep-dives on attention and Transformers, and AI experiments.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Eunice Labs",
+    title: "Eunice Labs — Deep Learning Experiments & Interactive Lessons",
+    description:
+      "Interactive deep learning lessons, technical deep-dives on attention and Transformers, and AI experiments.",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Eunice Labs",
+  url: "https://eunicelabs.com",
+  description:
+    "Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation.",
 };
 
 export default function RootLayout({
@@ -48,6 +73,10 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={`${ebGaramond.variable} ${inter.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         {children}
         <script
           dangerouslySetInnerHTML={{

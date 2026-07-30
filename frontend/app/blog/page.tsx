@@ -5,8 +5,15 @@ import { blogPosts } from '../lib/blogs';
 import BlogCard from '../components/BlogCard';
 
 export const metadata = {
-  title: 'Blogs | Eunice Labs',
-  description: 'Deep technical explorations of the architectures that power modern AI.',
+  title: 'Blogs',
+  description: 'Deep technical explorations of the architectures that power modern AI — seq2seq, attention mechanisms, and Transformers.',
+  alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Blogs | Eunice Labs',
+    description: 'Deep technical explorations of the architectures that power modern AI.',
+    url: '/blog',
+    images: ['/opengraph-image.png'],
+  },
 };
 
 export default function BlogPage() {

@@ -26,9 +26,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${post.title} | Eunice Labs`,
+    title: post.title,
     description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: 'article',
+      title: `${post.title} | Eunice Labs`,
+      description: post.description,
+      url: `/blog/${post.slug}`,
+      tags: post.tags,
+      images: ['/opengraph-image.png'],
+    },
   };
+}
+
+// "Jan 2025" -> "2025-01-01"
+function toIsoDate(date: string) {
+  const parsed = new Date(`1 ${date}`);
+  return isNaN(parsed.getTime()) ? undefined : parsed.toISOString().slice(0, 10);
 }
 
 async function getBlogPost(slug: string) {
@@ -61,10 +76,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
-  // No parsing needed - react-markdown handles it
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: toIsoDate(post.date),
+    keywords: post.tags.join(', '),
+    url: `https://eunicelabs.com/blog/${post.slug}`,
+    author: { '@type': 'Organization', name: 'Eunice Labs', url: 'https://eunicelabs.com' },
+    publisher: { '@type': 'Organization', name: 'Eunice Labs', url: 'https://eunicelabs.com' },
+  };
 
   return (
     <div className="min-h-screen text-lab-text">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Header */}
       <header className="border-b border-white/20 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-6 py-4">

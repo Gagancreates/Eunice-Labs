@@ -53,5 +53,14 @@ export const blogPosts: BlogPost[] = [
     tags: ['Deep Learning', 'Transformers', 'Foundation Models'],
     readTime: '20 min',
     order: 5
+  },
+  {
+    slug: 'swe_rl_grpo',
+    title: 'SWE-RL: Teaching LLMs to Fix Real Software with RL',
+    date: 'Aug 2026',
+    description: 'How GRPO trains a policy LLM to repair real GitHub issues — the full objective built up with one running example, and how this recipe became the industry default.',
+    tags: ['Reinforcement Learning', 'GRPO', 'Code Models'],
+    readTime: '18 min',
+    order: 6
   }
 ];

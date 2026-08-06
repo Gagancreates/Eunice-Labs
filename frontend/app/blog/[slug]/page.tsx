@@ -94,21 +94,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      {/* Header */}
-      <header className="border-b border-white/20 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <Link
-            href="/#foundations"
-            className="inline-flex items-center gap-2 text-lab-accent hover:text-lab-text transition-colors group"
-          >
-            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="font-sans text-sm uppercase tracking-wider">Back to Foundations</span>
-          </Link>
-        </div>
-      </header>
-
       {/* Article */}
-      <article className="max-w-4xl mx-auto px-6 py-16">
+      <article className="max-w-4xl mx-auto px-6 py-16 relative">
+        {/* Back arrow: inline above the title on mobile, floated into the
+            left margin at title level on large screens */}
+        <Link
+          href="/blog"
+          aria-label="Back to Writings"
+          className="group inline-flex text-lab-accent hover:text-lab-text transition-colors mb-8 lg:mb-0 lg:absolute lg:-left-10 lg:top-[5rem]"
+        >
+          <ArrowLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
+        </Link>
+
         {/* Markdown content will have the H1 title */}
 
         {/* Content */}

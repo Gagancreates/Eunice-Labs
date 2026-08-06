@@ -4,21 +4,30 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setPastHero(window.scrollY > window.innerHeight * 0.7);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // On the homepage the hero already shows the wordmark — only reveal
+  // the header brand after scrolling past it
+  const showBrand = pathname !== '/' || pastHero;
 
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -40,11 +49,9 @@ const Navigation: React.FC = () => {
   const links = [
     { name: 'About', href: '#about' },
     { name: 'Focus', href: '#focus' },
-    { name: 'Foundations', href: '#foundations' },
-    { name: 'Experiments', href: '#experiments' },
+    { name: 'Experiments', href: '/experiments' },
     { name: 'Resources', href: '#resources' },
     { name: 'Writings', href: '/blog' },
-    { name: 'Learn', href: '/learn' },
     { name: 'Connect', href: '#connect' },
   ];
 
@@ -54,17 +61,22 @@ const Navigation: React.FC = () => {
         isScrolled ? 'bg-[#FFDAD6]/90 backdrop-blur-sm border-b border-white/20 py-4 shadow-sm' : 'py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        <a 
-          href="#" 
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center relative">
+        {/* When hidden, the brand leaves the flex flow so the nav centers symmetrically */}
+        <a
+          href="#"
           onClick={scrollToTop}
-          className="font-serif text-2xl font-bold text-lab-text tracking-tight hover:text-lab-accent transition-colors"
+          aria-hidden={!showBrand}
+          tabIndex={showBrand ? 0 : -1}
+          className={`font-serif text-2xl font-bold text-lab-text tracking-tight hover:text-lab-accent transition-opacity duration-300 ${
+            showBrand ? 'opacity-100' : 'opacity-0 pointer-events-none absolute left-6'
+          }`}
         >
           Eunice Labs
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className={`hidden md:flex space-x-8 ${showBrand ? '' : 'mx-auto'}`}>
           {links.map((link) =>
             link.href.startsWith('/') ? (
               <Link
@@ -88,8 +100,8 @@ const Navigation: React.FC = () => {
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-lab-text"
+        <button
+          className="md:hidden ml-auto text-lab-text"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

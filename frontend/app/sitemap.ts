@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, priority: 1 },
     { url: `${baseUrl}/blog`, priority: 0.8 },
     { url: `${baseUrl}/learn`, priority: 0.8 },
+    { url: `${baseUrl}/experiments`, priority: 0.8 },
     { url: `${baseUrl}/resources`, priority: 0.6 },
   ];
 

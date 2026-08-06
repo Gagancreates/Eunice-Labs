@@ -35,7 +35,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h1 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 700;
-          font-size: 2.25rem;
+          font-size: 2rem;
           line-height: 1.1;
           margin-top: 1em;
           margin-bottom: 0.5em;
@@ -52,13 +52,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h1 {
-            font-size: 4rem;
+            font-size: 3rem;
           }
         }
 
         @media (min-width: 1024px) {
           .markdown-content h1 {
-            font-size: 4.5rem;
+            font-size: 3.25rem;
           }
         }
 
@@ -77,7 +77,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h2 {
-            font-size: 2.25rem;
+            font-size: 1.85rem;
           }
         }
 
@@ -93,7 +93,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h3 {
-            font-size: 1.65rem;
+            font-size: 1.45rem;
           }
         }
 

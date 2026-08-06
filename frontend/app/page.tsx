@@ -3,42 +3,10 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Section from './components/Section';
-import ExperimentCard from './components/ExperimentCard';
-import BlogCard from './components/BlogCard';
-import { Experiment } from './types';
-import { Github, Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { blogPosts } from './lib/blogs';
 import { featuredResources } from './lib/resources';
 import Link from 'next/link';
-
-const experiments: Experiment[] = [
-  {
-    id: '1',
-    title: 'Deep Learning & LLMs — Interactive',
-    date: 'Live',
-    description: 'An interactive learning path from tensors to Transformers. 8 lessons with live visualisations, playgrounds, and conceptual quizzes. Built to make the foundations of modern AI tangible.',
-    tags: ['education', 'interactive', 'open-source'],
-    link: '/learn'
-  },
-  {
-    id: '2',
-    title: 'Tool Calling Benchmark Suite',
-    date: 'Coming Soon',
-    description: 'A comprehensive evaluation framework specifically designed to test the reliability, accuracy, and edge-case handling of LLM function calling capabilities across diverse domains.',
-    tags: ['evals', 'agents', 'infrastructure'],
-    link: '#'
-  },
-  {
-    id: '3',
-    title: 'Agent Memory Patterns',
-    date: 'Research',
-    description: 'Exploring novel architectures for long-term memory in autonomous agents. Investigating vector retrieval hierarchies vs. summary compression techniques for maintaining coherent persona state.',
-    tags: ['memory', 'architecture', 'research'],
-    link: '#'
-  }
-];
-
 
 const App: React.FC = () => {
   return (
@@ -78,62 +46,14 @@ const App: React.FC = () => {
       <Section id="focus" title="Current Focus">
         <div className="bg-white p-8 md:p-12 shadow-sm border border-transparent hover:border-lab-accent/10 transition-colors">
           <p className="font-serif text-2xl md:text-3xl leading-relaxed text-lab-text mb-6">
-            We are currently obsessed with <span className="text-lab-accent italic">multi-agent systems</span> and the reliability of <span className="text-lab-accent italic">tool calling</span>.
+            We are currently focused on <span className="text-lab-accent italic">reinforcement learning</span> — from policy-gradient fundamentals to how modern <span className="text-lab-accent italic">reasoning and coding agents</span> are trained.
           </p>
           <div className="h-px w-20 bg-lab-accent/20 mb-6"></div>
           <p className="font-sans text-lab-text/70 leading-relaxed max-w-2xl">
-            Beyond the hype, we are investigating rigorous benchmarks for agentic behavior and building modular libraries for prompt optimization. The goal is to move from &quot;it works sometimes&quot; to &quot;it works predictably.&quot;
+            Alongside that, we are exploring harness engineering and agent memory: how tool-use loops stay reliable over long horizons, and what it actually takes for an agent to remember and build on its own past context. Beyond the hype, the goal is real depth in how these systems learn and operate — not repeating what papers claim.
           </p>
         </div>
       </Section>
-
-      {/* Foundations - Blog Section */}
-      <Section id="foundations" title="Foundations">
-        <div className="bg-white/50 p-6 md:p-8 mb-12 border-l-4 border-lab-accent/30">
-          <p className="font-sans text-lab-text/80 leading-relaxed max-w-4xl">
-            Deep technical explorations of the architectures that power modern AI. Each post combines theory, mathematics, diagrams, and production-ready PyTorch code—breaking down complex concepts into buildable components.
-          </p>
-        </div>
-
-        <div className="mb-12">
-          <p className="font-serif text-2xl md:text-3xl text-lab-text/90 leading-relaxed mb-4">
-            From attention mechanisms to transformers
-          </p>
-          <div className="h-px w-20 bg-lab-accent/20 mb-4"></div>
-          <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl mb-4">
-            Before building agents and optimizing prompts, we need to understand the foundations. This series traces the evolution of neural sequence modeling—from basic seq2seq to the attention revolution that powers modern LLMs.
-          </p>
-          <p className="font-sans text-lab-text/60 leading-relaxed max-w-3xl text-sm">
-            Each post includes mathematical explanations, architectural diagrams, and PyTorch implementations. Topics progress from encoder-decoder architectures through Bahdanau and Luong attention mechanisms, culminating in the complete Transformer architecture from "Attention is All You Need."
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {blogPosts.map((post, index) => (
-            <BlogCard key={post.slug} post={post} index={index} />
-          ))}
-        </div>
-      </Section>
-
-      {/* Experiments */}
-      <section id="experiments" className="py-20 md:py-32 px-6 scroll-mt-24">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="font-serif text-3xl md:text-4xl text-lab-text mb-16 border-b border-lab-accent/20 pb-4 inline-block pr-12"
-          >
-            Experiments
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {experiments.map((exp, index) => (
-              <ExperimentCard key={exp.id} experiment={exp} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Resources */}
       <Section id="resources" title="Resources">
@@ -193,12 +113,12 @@ const App: React.FC = () => {
       {/* Connect */}
       <Section id="connect" title="Connect">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-          <a href="https://github.com/Gagancreates" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center md:items-start p-6 bg-white shadow-sm hover:shadow-md transition-all">
-            <Github className="w-8 h-8 text-lab-text mb-4 group-hover:text-lab-accent transition-colors" />
-            <h3 className="font-serif text-xl mb-2">GitHub</h3>
-            <p className="text-sm text-gray-500 font-sans">Follow the open source code</p>
+          <a href="https://huggingface.co/Eunice-Labs" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center md:items-start p-6 bg-white shadow-sm hover:shadow-md transition-all">
+            <span className="text-3xl leading-none mb-4" aria-hidden="true">🤗</span>
+            <h3 className="font-serif text-xl mb-2">Hugging Face</h3>
+            <p className="text-sm text-gray-500 font-sans">Models, datasets & open research</p>
           </a>
-          <a href="mailto:gagan@ztutor.app" className="group flex flex-col items-center md:items-start p-6 bg-white shadow-sm hover:shadow-md transition-all">
+          <a href="mailto:gagan@eunicelabs.com" className="group flex flex-col items-center md:items-start p-6 bg-white shadow-sm hover:shadow-md transition-all">
             <Mail className="w-8 h-8 text-lab-text mb-4 group-hover:text-lab-accent transition-colors" />
             <h3 className="font-serif text-xl mb-2">Email</h3>
             <p className="text-sm text-gray-500 font-sans">Collaborations & inquiries</p>

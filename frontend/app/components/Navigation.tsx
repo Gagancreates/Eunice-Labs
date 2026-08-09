@@ -50,10 +50,12 @@ const Navigation: React.FC = () => {
     'text-sm font-medium font-sans uppercase tracking-widest transition-colors cursor-pointer text-lab-text/80 hover:text-lab-accent';
 
   return (
-    <header className="fixed top-0 w-full z-50 flex flex-col items-end md:items-center px-4">
+    // pointer-events-none so the full-width strip doesn't swallow clicks on the
+    // page content beneath it; the bar and menu re-enable them for themselves
+    <header className="fixed top-0 w-full z-50 flex flex-col items-end md:items-center px-4 pointer-events-none">
       {/* Flat across the top at rest; contracts into a floating pill on scroll */}
       <div
-        className={`flex items-center gap-8 transition-all duration-500 ease-out ${
+        className={`pointer-events-auto flex items-center gap-8 transition-all duration-500 ease-out ${
           isScrolled
             ? 'mt-3 p-2.5 md:px-7 md:py-3 rounded-full backdrop-blur-xl border bg-white/95 border-lab-accent/20 shadow-[0_8px_30px_rgba(0,0,0,0.14)] dark:bg-[#2b2521]/95 dark:border-lab-accent/40 dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]'
             : 'mt-6 px-2 py-1 rounded-full bg-transparent border border-transparent'
@@ -106,7 +108,7 @@ const Navigation: React.FC = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mt-2 w-full max-w-sm rounded-2xl bg-lab-bg/90 backdrop-blur-md border border-lab-accent/15 shadow-lg overflow-hidden"
+            className="pointer-events-auto md:hidden mt-2 w-full max-w-sm rounded-2xl bg-lab-bg/90 backdrop-blur-md border border-lab-accent/15 shadow-lg overflow-hidden"
           >
             <nav className="flex flex-col p-6 space-y-4">
               {links.map((link) =>

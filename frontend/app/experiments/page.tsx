@@ -41,11 +41,8 @@ export default function ExperimentsPage() {
     <div className="min-h-screen text-lab-text">
       <Navigation />
 
-      <main className="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-24">
-        <PageHeader
-          title="Experiments"
-          intro="Interactive systems and research artifacts built at the lab — things we made to understand how these models actually work."
-        />
+      <main className="max-w-4xl mx-auto px-6 pt-7 pb-16 md:pt-36 md:pb-24">
+        <PageHeader title="Experiments" />
 
         <div>
           {experiments.map((exp) => (
@@ -62,7 +59,7 @@ export default function ExperimentsPage() {
                   />
                 </span>
               </div>
-              <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">{exp.description}</p>
+              <p className="font-sans text-xs md:text-sm text-lab-text/60 mt-1 max-w-2xl">{exp.description}</p>
             </Link>
           ))}
         </div>

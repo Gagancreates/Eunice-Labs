@@ -31,7 +31,7 @@ export default function ResourcesPage() {
               />
             </span>
           </div>
-          <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">
+          <p className="font-sans text-xs md:text-sm text-lab-text/60 mt-1 max-w-2xl">
             {resource.description}
           </p>
         </a>
@@ -43,10 +43,10 @@ export default function ResourcesPage() {
     <div className="min-h-screen text-lab-text">
       <Navigation />
 
-      <main className="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-24">
+      <main className="max-w-4xl mx-auto px-6 pt-7 pb-16 md:pt-36 md:pb-24">
         <PageHeader
           title="Resources"
-          intro="Important papers I have read and GitHub repos which contain code implementations — spanning foundational architectures, reasoning techniques, and model compression."
+          intro="Important papers I have read and GitHub repos which contain code implementations."
         />
 
         <h2 className="font-serif text-xl md:text-2xl font-semibold text-lab-text mb-4">Papers</h2>

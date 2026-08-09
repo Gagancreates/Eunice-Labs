@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 
 interface PageHeaderProps {
   title: string;
-  intro: string;
+  intro?: string;
 }
 
 /** Shared header for the section pages so their alignment and type stay identical. */
@@ -17,8 +17,14 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, intro }) => (
       <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to
       Home
     </Link>
-    <h1 className="font-serif text-4xl md:text-6xl text-lab-text tracking-tight mb-4">{title}</h1>
-    <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl">{intro}</p>
+    <h1 className={`font-serif text-4xl md:text-6xl text-lab-text tracking-tight ${intro ? 'mb-4' : ''}`}>
+      {title}
+    </h1>
+    {intro && (
+      <p className="font-sans text-sm md:text-base text-lab-text/70 leading-relaxed max-w-3xl">
+        {intro}
+      </p>
+    )}
   </div>
 );
 

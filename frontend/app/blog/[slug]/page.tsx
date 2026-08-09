@@ -99,7 +99,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <Navigation />
 
       {/* Article */}
-      <article className="max-w-4xl mx-auto px-6 pt-32 pb-16 relative">
+      <article className="max-w-4xl mx-auto px-6 pt-7 pb-16 md:pt-32 relative">
         {/* Back arrow: inline above the title on mobile, floated into the
             left margin at title level on large screens */}
         <Link

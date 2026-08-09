@@ -23,11 +23,8 @@ export default function BlogPage() {
     <div className="min-h-screen text-lab-text">
       <Navigation />
 
-      <main className="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-24">
-        <PageHeader
-          title="Writings"
-          intro="Deep technical explorations of the architectures that power modern AI — tracing the path from sequence models through attention to Transformers."
-        />
+      <main className="max-w-4xl mx-auto px-6 pt-7 pb-16 md:pt-36 md:pb-24">
+        <PageHeader title="Writings" />
 
         <div>
           {blogPosts.map((post) => (
@@ -44,7 +41,7 @@ export default function BlogPage() {
                   />
                 </span>
               </div>
-              <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">
+              <p className="font-sans text-xs md:text-sm text-lab-text/60 mt-1 max-w-2xl">
                 {post.description}
               </p>
             </Link>

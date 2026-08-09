@@ -148,7 +148,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       </article>
 
       {/* Footer */}
-      <footer className="py-12 text-center border-t border-white/20">
+      <footer className="py-12 text-center border-t border-lab-accent/10">
         <p className="font-serif text-lab-text/60 italic mb-2">
           &quot;Purpose of Knowledge is Application&quot;
         </p>

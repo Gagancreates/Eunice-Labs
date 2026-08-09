@@ -50,7 +50,7 @@ const Navigation: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Focus', href: '#focus' },
     { name: 'Experiments', href: '/experiments' },
-    { name: 'Resources', href: '#resources' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Writings', href: '/blog' },
     { name: 'Connect', href: '#connect' },
   ];
@@ -58,7 +58,7 @@ const Navigation: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#FFDAD6]/90 backdrop-blur-sm border-b border-white/20 py-4 shadow-sm' : 'py-6 bg-transparent'
+        isScrolled ? 'bg-[#fdf8f0]/90 backdrop-blur-sm border-b border-lab-accent/10 py-4 shadow-sm' : 'py-6 bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center relative">
@@ -115,7 +115,7 @@ const Navigation: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#FFDAD6] border-b border-white/20 overflow-hidden"
+            className="md:hidden bg-[#fdf8f0] border-b border-lab-accent/10 overflow-hidden"
           >
             <nav className="flex flex-col p-6 space-y-4">
               {links.map((link) =>

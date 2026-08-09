@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-lab-bg: #FFDAD6;
+  --color-lab-bg: #fdf8f0;
   --color-lab-text: #1a1a1a;
   --color-lab-accent: #8B4513;
   --font-serif: "EB Garamond", serif;
@@ -21,10 +21,10 @@
   }
 
   body {
-    background-color: #FFDAD6 !important;
+    background-color: #fdf8f0 !important;
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px) !important;
+      linear-gradient(rgba(139, 69, 19, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 69, 19, 0.05) 1px, transparent 1px) !important;
     background-size: 50px 50px !important;
     color: #1a1a1a;
     font-family: "Inter", sans-serif;

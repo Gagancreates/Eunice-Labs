@@ -18,21 +18,6 @@ const ResourcesPage: React.FC = () => {
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-4xl mx-auto">
 
-          {/* Back link */}
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mb-12"
-          >
-            <Link
-              href="/#resources"
-              className="inline-flex items-center gap-2 font-sans text-sm text-lab-text/60 hover:text-lab-accent transition-colors"
-            >
-              <ArrowLeft size={14} /> Back to Home
-            </Link>
-          </motion.div>
-
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +25,13 @@ const ResourcesPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <h1 className="font-serif text-4xl md:text-5xl text-lab-text mb-4 border-b border-lab-accent/20 pb-4 inline-block pr-16">
+            <Link
+              href="/"
+              className="group inline-flex items-center gap-2 font-sans text-sm text-lab-text/60 hover:text-lab-accent transition-colors mb-8"
+            >
+              <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Home
+            </Link>
+            <h1 className="font-serif text-4xl md:text-5xl text-lab-text mb-4">
               All Resources
             </h1>
           </motion.div>
@@ -49,9 +40,9 @@ const ResourcesPage: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-white/50 p-6 md:p-8 mb-14 border-l-4 border-lab-accent/30"
+            className="mb-14"
           >
-            <p className="font-sans text-lab-text/80 leading-relaxed">
+            <p className="font-sans text-lab-text/70 leading-relaxed max-w-3xl">
               Important papers I have read and GitHub repos which contain code implementations — spanning foundational architectures, reasoning techniques, and model compression.
             </p>
           </motion.div>
@@ -61,12 +52,12 @@ const ResourcesPage: React.FC = () => {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="font-serif text-2xl text-lab-text mb-6 border-b border-lab-accent/20 pb-2"
+            className="font-serif text-2xl font-semibold text-lab-text mb-6"
           >
             Papers
           </motion.h2>
 
-          <div className="space-y-5 mb-14">
+          <div className="mb-14">
             {papers.map((resource, idx) => (
               <motion.a
                 key={resource.id}
@@ -76,22 +67,23 @@ const ResourcesPage: React.FC = () => {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.25 + idx * 0.08 }}
-                className="group block bg-white hover:bg-white/80 p-6 shadow-sm transition-all border-l-2 border-transparent hover:border-lab-accent cursor-pointer"
+                className="group block py-5 cursor-pointer"
               >
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="font-serif text-xl text-lab-text group-hover:text-lab-accent transition-colors pr-4">
+                <div className="flex justify-between items-baseline gap-6">
+                  <h3 className="font-serif text-xl text-lab-text group-hover:text-lab-accent transition-colors">
                     {resource.title}
                   </h3>
-                  <span className="text-xs font-sans uppercase tracking-widest text-gray-400 group-hover:text-lab-accent/70 shrink-0">
+                  <span className="flex items-center gap-2 text-xs font-sans uppercase tracking-widest text-gray-400 group-hover:text-lab-accent/70 shrink-0">
                     {resource.type}
+                    <ArrowUpRight
+                      size={12}
+                      className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity"
+                    />
                   </span>
                 </div>
-                <p className="font-sans text-sm text-gray-600 mb-2">
+                <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">
                   {resource.description}
                 </p>
-                <div className="flex items-center text-xs font-semibold text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                  Access Resource <ArrowUpRight size={12} className="ml-1" />
-                </div>
               </motion.a>
             ))}
           </div>
@@ -103,12 +95,12 @@ const ResourcesPage: React.FC = () => {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="font-serif text-2xl text-lab-text mb-6 border-b border-lab-accent/20 pb-2"
+                className="font-serif text-2xl font-semibold text-lab-text mb-6"
               >
                 Tutorials &amp; Code
               </motion.h2>
 
-              <div className="space-y-5">
+              <div>
                 {others.map((resource, idx) => (
                   <motion.a
                     key={resource.id}
@@ -118,22 +110,23 @@ const ResourcesPage: React.FC = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.45 + idx * 0.08 }}
-                    className="group block bg-white hover:bg-white/80 p-6 shadow-sm transition-all border-l-2 border-transparent hover:border-lab-accent cursor-pointer"
+                    className="group block py-5 cursor-pointer"
                   >
-                    <div className="flex justify-between items-baseline mb-2">
-                      <h3 className="font-serif text-xl text-lab-text group-hover:text-lab-accent transition-colors pr-4">
+                    <div className="flex justify-between items-baseline gap-6">
+                      <h3 className="font-serif text-xl text-lab-text group-hover:text-lab-accent transition-colors">
                         {resource.title}
                       </h3>
-                      <span className="text-xs font-sans uppercase tracking-widest text-gray-400 group-hover:text-lab-accent/70 shrink-0">
+                      <span className="flex items-center gap-2 text-xs font-sans uppercase tracking-widest text-gray-400 group-hover:text-lab-accent/70 shrink-0">
                         {resource.type}
+                        <ArrowUpRight
+                          size={12}
+                          className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </span>
                     </div>
-                    <p className="font-sans text-sm text-gray-600 mb-2">
+                    <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">
                       {resource.description}
                     </p>
-                    <div className="flex items-center text-xs font-semibold text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                      Access Resource <ArrowUpRight size={12} className="ml-1" />
-                    </div>
                   </motion.a>
                 ))}
               </div>
@@ -143,7 +136,7 @@ const ResourcesPage: React.FC = () => {
         </div>
       </main>
 
-      <footer className="py-12 text-center border-t border-white/20">
+      <footer className="py-12 text-center border-t border-lab-accent/10">
         <p className="font-serif text-lab-text/60 italic mb-2">
           &quot;Purpose of Knowledge is Application&quot;
         </p>

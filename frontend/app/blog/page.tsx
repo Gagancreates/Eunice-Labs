@@ -22,23 +22,19 @@ export default function BlogPage() {
       <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         {/* Page header */}
         <div className="mb-16">
-          <div className="flex items-center gap-5 mb-6">
-            <Link
-              href="/"
-              aria-label="Back to home"
-              className="group text-lab-accent hover:text-lab-text transition-colors"
-            >
-              <ArrowLeft size={28} className="group-hover:-translate-x-1 transition-transform" />
-            </Link>
-            <h1 className="font-serif text-5xl md:text-6xl text-lab-text tracking-tight">
-              Writings
-            </h1>
-          </div>
-          <div className="h-px w-20 bg-lab-accent/20" />
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 font-sans text-sm text-lab-text/60 hover:text-lab-accent transition-colors mb-8"
+          >
+            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Home
+          </Link>
+          <h1 className="font-serif text-5xl md:text-6xl text-lab-text tracking-tight">
+            Writings
+          </h1>
         </div>
 
         {/* Post list */}
-        <div className="divide-y divide-lab-accent/10 border-y border-lab-accent/10">
+        <div>
           {blogPosts.map((post) => (
             <Link
               key={post.slug}
@@ -67,7 +63,7 @@ export default function BlogPage() {
       </main>
 
       {/* Footer */}
-      <footer className="py-12 text-center border-t border-white/20">
+      <footer className="py-12 text-center border-t border-lab-accent/10">
         <p className="font-serif text-lab-text/60 italic mb-2">
           &ldquo;Purpose of Knowledge is Application&rdquo;
         </p>

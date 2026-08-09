@@ -17,7 +17,7 @@ const Section: React.FC<SectionProps> = ({ id, title, children }) => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="font-serif text-3xl md:text-4xl text-lab-text mb-12"
+          className="font-serif text-2xl md:text-4xl text-lab-text mb-12"
         >
           {title}
         </motion.h2>

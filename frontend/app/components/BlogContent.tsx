@@ -35,7 +35,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h1 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 700;
-          font-size: 2rem;
+          font-size: 1.75rem;
           line-height: 1.1;
           margin-top: 1em;
           margin-bottom: 0.5em;
@@ -65,7 +65,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h2 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           line-height: 1.3;
           margin-top: 2.5rem;
           margin-bottom: 1rem;
@@ -84,7 +84,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h3 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 1.1rem;
+          font-size: 1rem;
           line-height: 1.4;
           margin-top: 2rem;
           margin-bottom: 0.75rem;
@@ -100,7 +100,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h4 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 500;
-          font-size: 1.05rem;
+          font-size: 0.95rem;
           line-height: 1.4;
           margin-top: 2em;
           margin-bottom: 0.5em;
@@ -116,7 +116,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         /* PARAGRAPHS */
         .markdown-content p {
           @apply font-sans;
-          font-size: 0.9375rem;
+          font-size: 0.875rem;
           line-height: 1.8;
           margin-bottom: 1.25rem;
           color: #3d3d3d;
@@ -179,7 +179,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           @apply font-sans;
           margin: 1.5rem 0;
           padding-left: 1.5em;
-          font-size: 0.9375rem;
+          font-size: 0.875rem;
           line-height: 1.8;
         }
 
@@ -277,7 +277,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           padding: 1rem 1.25rem;
           text-align: left;
           font-weight: 600;
-          font-size: 1.05rem;
+          font-size: 0.95rem;
           border-right: 1px solid #404040;
         }
 
@@ -337,6 +337,81 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content pre.language-plaintext code,
         .markdown-content pre.language- code {
           color: #2d2d2d;
+        }
+
+        /* DARK MODE — the rules above are tuned for the light palette;
+           these re-map the text, borders and surfaces that would otherwise
+           stay dark-on-dark. */
+        .dark .markdown-content h1,
+        .dark .markdown-content h2,
+        .dark .markdown-content h3,
+        .dark .markdown-content h4,
+        .dark .markdown-content h5,
+        .dark .markdown-content h6,
+        .dark .markdown-content strong {
+          color: #f0e9e0;
+        }
+
+        .dark .markdown-content,
+        .dark .markdown-content p,
+        .dark .markdown-content li,
+        .dark .markdown-content td,
+        .dark .markdown-content th {
+          color: #d8cfc4;
+        }
+
+        .dark .markdown-content h2 {
+          border-bottom-color: rgba(240, 233, 224, 0.12);
+        }
+
+        .dark .markdown-content hr {
+          border-top-color: rgba(240, 233, 224, 0.12);
+        }
+
+        .dark .markdown-content a {
+          color: #c98a4b;
+          border-bottom-color: #c98a4b;
+        }
+
+        .dark .markdown-content a:hover {
+          color: #dda76d;
+          border-bottom-color: #dda76d;
+        }
+
+        .dark .markdown-content blockquote {
+          background: rgba(255, 255, 255, 0.03);
+          border-left-color: #c98a4b;
+        }
+
+        .dark .markdown-content blockquote p {
+          color: #bdb3a6;
+        }
+
+        .dark .markdown-content :not(pre) > code {
+          background: rgba(255, 255, 255, 0.07);
+          color: #e6a4a4;
+        }
+
+        .dark .markdown-content pre.language-plaintext,
+        .dark .markdown-content pre.language-,
+        .dark .markdown-content pre.language-plaintext code,
+        .dark .markdown-content pre.language- code {
+          background: #16120f;
+          border-color: rgba(240, 233, 224, 0.12);
+          color: #d8cfc4;
+        }
+
+        .dark .markdown-content table td,
+        .dark .markdown-content table th {
+          border-color: rgba(240, 233, 224, 0.12);
+        }
+
+        .dark .markdown-content table tr:nth-child(even) {
+          background: rgba(255, 255, 255, 0.02);
+        }
+
+        .dark .markdown-content img {
+          border-color: rgba(240, 233, 224, 0.12);
         }
       `}</style>
     </div>

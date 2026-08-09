@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { blogPosts } from '../lib/blogs';
+import Navigation from '../components/Navigation';
+import PageHeader from '../components/PageHeader';
+import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Writings',
@@ -18,59 +21,38 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <div className="min-h-screen text-lab-text">
-      {/* Main content */}
-      <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-        {/* Page header */}
-        <div className="mb-16">
-          <Link
-            href="/"
-            className="group inline-flex items-center gap-2 font-sans text-sm text-lab-text/60 hover:text-lab-accent transition-colors mb-8"
-          >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Home
-          </Link>
-          <h1 className="font-serif text-5xl md:text-6xl text-lab-text tracking-tight">
-            Writings
-          </h1>
-        </div>
+      <Navigation />
 
-        {/* Post list */}
+      <main className="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-24">
+        <PageHeader
+          title="Writings"
+          intro="Deep technical explorations of the architectures that power modern AI — tracing the path from sequence models through attention to Transformers."
+        />
+
         <div>
           {blogPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-6 py-6"
-            >
-              <div className="flex items-baseline gap-4 min-w-0">
-                <span className="font-serif text-sm text-lab-accent/40">
-                  {String(post.order).padStart(2, '0')}
-                </span>
-                <span className="font-serif text-xl md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="group block py-6">
+              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-6">
+                <span className="font-serif text-lg md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">
                   {post.title}
                 </span>
+                <span className="flex items-center gap-3 text-xs font-sans uppercase tracking-widest text-lab-text/40 shrink-0">
+                  {post.date}
+                  <ArrowUpRight
+                    size={14}
+                    className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </span>
               </div>
-              <div className="flex items-center gap-4 text-xs text-lab-text/50 font-sans shrink-0 pl-8 md:pl-0">
-                <span>{post.date}</span>
-                <span>{post.readTime}</span>
-                <ArrowUpRight
-                  size={14}
-                  className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </div>
+              <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">
+                {post.description}
+              </p>
             </Link>
           ))}
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-12 text-center border-t border-lab-accent/10">
-        <p className="font-serif text-lab-text/60 italic mb-2">
-          &ldquo;Purpose of Knowledge is Application&rdquo;
-        </p>
-        <p className="font-sans text-xs text-lab-text/40 tracking-widest uppercase">
-          © {new Date().getFullYear()} Eunice Labs
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

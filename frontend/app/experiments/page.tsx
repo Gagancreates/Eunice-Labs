@@ -1,7 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import PageHeader from '../components/PageHeader';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Experiments',
@@ -36,54 +39,36 @@ const experiments: Experiment[] = [
 export default function ExperimentsPage() {
   return (
     <div className="min-h-screen text-lab-text">
-      {/* Main content */}
-      <main className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-        {/* Page header */}
-        <div className="mb-16">
-          <Link
-            href="/"
-            className="group inline-flex items-center gap-2 font-sans text-sm text-lab-text/60 hover:text-lab-accent transition-colors mb-8"
-          >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Home
-          </Link>
-          <h1 className="font-serif text-5xl md:text-6xl text-lab-text tracking-tight">
-            Experiments
-          </h1>
-        </div>
+      <Navigation />
 
-        {/* Experiment list */}
+      <main className="max-w-4xl mx-auto px-6 pt-32 pb-16 md:pt-36 md:pb-24">
+        <PageHeader
+          title="Experiments"
+          intro="Interactive systems and research artifacts built at the lab — things we made to understand how these models actually work."
+        />
+
         <div>
           {experiments.map((exp) => (
-            <Link key={exp.href} href={exp.href} className="group block py-8">
-              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-6">
-                <span className="font-serif text-xl md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">
+            <Link key={exp.href} href={exp.href} className="group block py-6">
+              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-6">
+                <span className="font-serif text-lg md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">
                   {exp.title}
                 </span>
-                <span className="flex items-center gap-3 text-xs text-lab-accent/70 font-sans uppercase tracking-widest shrink-0">
+                <span className="flex items-center gap-3 text-xs font-sans uppercase tracking-widest text-lab-text/40 shrink-0">
                   {exp.status}
                   <ArrowUpRight
                     size={14}
-                    className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity"
                   />
                 </span>
               </div>
-              <p className="font-sans text-sm text-lab-text/70 leading-relaxed max-w-2xl mt-2">
-                {exp.description}
-              </p>
+              <p className="font-sans text-sm text-lab-text/60 mt-1 max-w-2xl">{exp.description}</p>
             </Link>
           ))}
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-12 text-center border-t border-lab-accent/10">
-        <p className="font-serif text-lab-text/60 italic mb-2">
-          &ldquo;Purpose of Knowledge is Application&rdquo;
-        </p>
-        <p className="font-sans text-xs text-lab-text/40 tracking-widest uppercase">
-          © {new Date().getFullYear()} Eunice Labs
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

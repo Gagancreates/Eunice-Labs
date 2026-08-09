@@ -20,7 +20,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
       transition={{ delay: index * 0.1, duration: 0.5 }}
     >
       <Link href={`/blog/${post.slug}`}>
-        <div className="group h-full bg-white p-8 shadow-sm border border-transparent hover:border-lab-accent/20 transition-all cursor-pointer hover:shadow-md">
+        <div className="group h-full bg-lab-card p-8 shadow-sm border border-transparent hover:border-lab-accent/20 transition-all cursor-pointer hover:shadow-md">
           {/* Order number */}
           <div className="text-lab-accent/30 font-serif text-sm mb-3">
             {String(post.order).padStart(2, '0')}

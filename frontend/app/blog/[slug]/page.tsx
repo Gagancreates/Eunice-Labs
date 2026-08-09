@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { blogPosts } from '../../lib/blogs';
 import BlogContent from '../../components/BlogContent';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 import fs from 'fs';
 import path from 'path';
 
@@ -94,8 +96,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      <Navigation />
+
       {/* Article */}
-      <article className="max-w-4xl mx-auto px-6 py-16 relative">
+      <article className="max-w-4xl mx-auto px-6 pt-32 pb-16 relative">
         {/* Back arrow: inline above the title on mobile, floated into the
             left margin at title level on large screens */}
         <Link
@@ -103,7 +107,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           aria-label="Back to Writings"
           className="group inline-flex text-lab-accent hover:text-lab-text transition-colors mb-8 lg:mb-0 lg:absolute lg:-left-10 lg:top-[5rem]"
         >
-          <ArrowLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
         </Link>
 
         {/* Markdown content will have the H1 title */}
@@ -147,15 +151,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="py-12 text-center border-t border-lab-accent/10">
-        <p className="font-serif text-lab-text/60 italic mb-2">
-          &quot;Purpose of Knowledge is Application&quot;
-        </p>
-        <p className="font-sans text-xs text-lab-text/40 tracking-widest uppercase">
-          © {new Date().getFullYear()} Eunice Labs
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

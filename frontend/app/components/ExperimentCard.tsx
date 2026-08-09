@@ -17,7 +17,7 @@ const ExperimentCard: React.FC<ExperimentCardProps> = ({ experiment, index }) =>
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full border border-transparent hover:border-lab-accent/10 group"
+      className="bg-lab-card p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full border border-transparent hover:border-lab-accent/10 group"
     >
       <div className="flex justify-between items-start mb-4">
         <span className="text-xs font-sans font-semibold tracking-wider text-lab-accent bg-lab-accent/5 px-2 py-1 rounded-sm uppercase">
@@ -38,7 +38,7 @@ const ExperimentCard: React.FC<ExperimentCardProps> = ({ experiment, index }) =>
       
       <div className="flex flex-wrap gap-2 mb-6">
         {experiment.tags.map(tag => (
-          <span key={tag} className="text-xs text-gray-500 font-mono">
+          <span key={tag} className="text-xs text-lab-text/50 font-mono">
             #{tag}
           </span>
         ))}

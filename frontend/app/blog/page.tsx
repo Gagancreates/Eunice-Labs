@@ -18,7 +18,17 @@ export const metadata = {
   },
 };
 
+// "Jan 2026" -> sortable timestamp; falls back to the series order
+function publishedAt(date: string) {
+  const parsed = new Date(`1 ${date}`);
+  return isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+}
+
 export default function BlogPage() {
+  const posts = [...blogPosts].sort(
+    (a, b) => publishedAt(b.date) - publishedAt(a.date) || b.order - a.order
+  );
+
   return (
     <div className="min-h-screen text-lab-text">
       <Navigation />
@@ -27,7 +37,7 @@ export default function BlogPage() {
         <PageHeader title="Writings" />
 
         <div>
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block py-6">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-6">
                 <span className="font-serif text-lg md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">

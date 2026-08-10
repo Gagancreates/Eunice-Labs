@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
 
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'Focus', href: '#focus' },
+    { name: 'About', href: '#about' },
     { name: 'Experiments', href: '/experiments' },
     { name: 'Resources', href: '/resources' },
     { name: 'Writings', href: '/blog' },

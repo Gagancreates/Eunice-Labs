@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
   };
 
   const links = [
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '/' },
     { name: 'Focus', href: '#focus' },
     { name: 'Experiments', href: '/experiments' },
     { name: 'Resources', href: '/resources' },
@@ -48,6 +48,15 @@ const Navigation: React.FC = () => {
 
   const linkClass =
     'text-sm font-medium font-sans uppercase tracking-widest transition-colors cursor-pointer text-lab-text/80 hover:text-lab-accent';
+
+  // Clicking Home while already on the homepage scrolls back up rather than
+  // navigating to the route we're already on
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (!isHome) return;
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     // pointer-events-none so the full-width strip doesn't swallow clicks on the
@@ -69,6 +78,7 @@ const Navigation: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href.startsWith('/') ? link.href : `/${link.href}`}
+                onClick={link.href === '/' ? handleHomeClick : undefined}
                 className={linkClass}
               >
                 {link.name}
@@ -116,7 +126,10 @@ const Navigation: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href.startsWith('/') ? link.href : `/${link.href}`}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      if (link.href === '/') handleHomeClick(e);
+                      setMobileMenuOpen(false);
+                    }}
                     className="text-base font-serif block cursor-pointer text-lab-text hover:text-lab-accent"
                   >
                     {link.name}

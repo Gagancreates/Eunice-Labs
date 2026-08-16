@@ -60,5 +60,26 @@ export const allResources: Resource[] = [
     type: 'Paper',
     description: 'DeepSeek (2025) - Shows how reinforcement learning alone can incentivize chain-of-thought reasoning in LLMs, achieving performance comparable to OpenAI o1.',
     url: 'https://arxiv.org/abs/2501.12948'
+  },
+  {
+    id: '9',
+    title: 'DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models',
+    type: 'Paper',
+    description: 'Shao et al. (2024) - Introduces GRPO (Group Relative Policy Optimization), a PPO variant that drops the value model and estimates advantages from group scores instead, cutting the memory cost of RL training.',
+    url: 'https://arxiv.org/abs/2402.03300'
+  },
+  {
+    id: '10',
+    title: 'SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution',
+    type: 'Paper',
+    description: 'Wei et al. (2025) - The first approach to scale RL-based LLM reasoning to real-world software engineering, training on open-source evolution data to reach 41% on SWE-bench Verified.',
+    url: 'https://arxiv.org/abs/2502.18449'
+  },
+  {
+    id: '11',
+    title: 'DAPO: An Open-Source LLM Reinforcement Learning System at Scale',
+    type: 'Paper',
+    description: 'Yu et al. (2025) - Open-sources a large-scale RL system built on Decoupled Clip and Dynamic sAmpling Policy Optimization, scoring 50 points on AIME 2024 with a Qwen2.5-32B base model.',
+    url: 'https://arxiv.org/abs/2503.14476'
   }
 ];

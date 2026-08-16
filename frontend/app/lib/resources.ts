@@ -65,21 +65,28 @@ export const allResources: Resource[] = [
     id: '9',
     title: 'DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models',
     type: 'Paper',
-    description: 'Shao et al. (2024) - Introduces GRPO (Group Relative Policy Optimization), a PPO variant that drops the value model and estimates advantages from group scores instead, cutting the memory cost of RL training.',
+    description: 'Shao et al. (2024) - Introduces GRPO, a PPO variant that drops the value model and estimates advantages from group scores instead.',
     url: 'https://arxiv.org/abs/2402.03300'
   },
   {
     id: '10',
     title: 'SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution',
     type: 'Paper',
-    description: 'Wei et al. (2025) - The first approach to scale RL-based LLM reasoning to real-world software engineering, training on open-source evolution data to reach 41% on SWE-bench Verified.',
+    description: 'Wei et al. (2025) - Scales RL reasoning to real software engineering by training on open-source evolution data.',
     url: 'https://arxiv.org/abs/2502.18449'
   },
   {
     id: '11',
     title: 'DAPO: An Open-Source LLM Reinforcement Learning System at Scale',
     type: 'Paper',
-    description: 'Yu et al. (2025) - Open-sources a large-scale RL system built on Decoupled Clip and Dynamic sAmpling Policy Optimization, scoring 50 points on AIME 2024 with a Qwen2.5-32B base model.',
+    description: 'Yu et al. (2025) - An open-source large-scale RL system, built on decoupled clipping and dynamic sampling.',
     url: 'https://arxiv.org/abs/2503.14476'
+  },
+  {
+    id: '12',
+    title: 'Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs',
+    type: 'Paper',
+    description: 'Wen et al. (2025) - Shows RLVR rewards correct reasoning, not just correct answers, measured with CoT-Pass@K.',
+    url: 'https://arxiv.org/abs/2506.14245'
   }
 ];

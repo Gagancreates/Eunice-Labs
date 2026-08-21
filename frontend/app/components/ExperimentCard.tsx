@@ -28,7 +28,7 @@ const ExperimentCard: React.FC<ExperimentCardProps> = ({ experiment, index }) =>
         </span>
       </div>
       
-      <h3 className="font-serif text-2xl text-lab-text mb-3 group-hover:text-lab-accent transition-colors">
+      <h3 className="font-serif text-xl text-lab-text mb-3 group-hover:text-lab-accent transition-colors">
         {experiment.title}
       </h3>
       
@@ -48,7 +48,7 @@ const ExperimentCard: React.FC<ExperimentCardProps> = ({ experiment, index }) =>
         href={experiment.link} 
         className="inline-flex items-center text-sm font-semibold text-lab-text group-hover:text-lab-accent transition-colors mt-auto"
       >
-        View Project <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+        View Project <ArrowRight size={15} className="ml-1 group-hover:translate-x-1 transition-transform" />
       </a>
     </motion.div>
   );

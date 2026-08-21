@@ -46,7 +46,7 @@ export const Lesson7Vis = () => {
         </div>
       </div>
 
-      <div className="text-muted text-xl">→</div>
+      <div className="text-muted text-lg">→</div>
 
       <div className="flex flex-col gap-0 border-2 border-accent/40 bg-neutral-950 relative">
         <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs text-accent/60 uppercase tracking-widest whitespace-nowrap">
@@ -104,7 +104,7 @@ export const Lesson7Vis = () => {
         <div className="absolute -left-14 top-3/4 text-[9px] text-neutral-500 rotate-[-90deg] whitespace-nowrap">residual +</div>
       </div>
 
-      <div className="text-muted text-xl">→</div>
+      <div className="text-muted text-lg">→</div>
 
       <div className="flex flex-col items-center gap-3">
         <div className="text-xs text-muted uppercase tracking-widest">Output</div>
@@ -171,7 +171,7 @@ export const Lesson7Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Multi-Head Attention Explorer</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Multi-Head Attention Explorer</h3>
         <p className="text-muted text-sm">
           Switch heads to see how each &quot;lens&quot; focuses on different word relationships.
         </p>

@@ -19,12 +19,12 @@ export default function ResourcesPage() {
           intro="Important papers I have read and GitHub repos which contain code implementations."
         />
 
-        <h2 className="font-serif text-xl md:text-2xl font-semibold text-lab-text mb-4">Papers</h2>
+        <h2 className="font-serif text-lg md:text-xl font-semibold text-lab-text mb-4">Papers</h2>
         <ResourceList items={papers} initialCount={5} />
 
         {others.length > 0 && (
           <>
-            <h2 className="font-serif text-xl md:text-2xl font-semibold text-lab-text mb-4 mt-14">
+            <h2 className="font-serif text-lg md:text-xl font-semibold text-lab-text mb-4 mt-14">
               Tutorials &amp; Code
             </h2>
             <ResourceList items={others} />

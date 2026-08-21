@@ -21,10 +21,10 @@ const App: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl mx-auto flex flex-col items-center"
         >
-          <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl mb-8 text-lab-text tracking-tight text-center leading-none">
+          <h1 className="font-serif text-4xl md:text-7xl lg:text-8xl mb-8 text-lab-text tracking-tight text-center leading-none">
             Eunice Labs
           </h1>
-          <p className="font-sans text-base md:text-xl lg:text-2xl text-lab-text/70 max-w-3xl mx-auto leading-relaxed text-center">
+          <p className="font-sans text-base md:text-lg lg:text-xl text-lab-text/70 max-w-3xl mx-auto leading-relaxed text-center">
             Exploring the frontiers of synthetic intelligence through curiosity-driven experimentation.
           </p>
         </motion.div>
@@ -32,8 +32,8 @@ const App: React.FC = () => {
 
       {/* About Section */}
       <Section id="about" title="The Lab">
-        <div className="font-sans text-base md:text-xl text-lab-text/80 leading-relaxed max-w-none">
-          <p className="mb-6 first-letter:text-4xl md:first-letter:text-5xl first-letter:font-serif first-letter:mr-2 first-letter:float-left first-letter:text-lab-accent">
+        <div className="font-sans text-base md:text-lg text-lab-text/80 leading-relaxed max-w-none">
+          <p className="mb-6 first-letter:text-3xl md:first-letter:text-4xl first-letter:font-serif first-letter:mr-2 first-letter:float-left first-letter:text-lab-accent">
             Eunice Labs is an independent AI research initiative run by <a href="https://gaganp.com" target="_blank" rel="noopener noreferrer" className="border-b border-lab-accent/30 hover:border-lab-accent hover:text-lab-accent transition-colors">Gagan</a>, focused on understanding how large language models actually work — particularly their reasoning capabilities, agent reliability, and self-modifying systems.
           </p>
           <p>
@@ -45,7 +45,7 @@ const App: React.FC = () => {
       {/* Current Focus */}
       <Section id="focus" title="Current Focus">
         <div className="bg-lab-card p-8 md:p-12 shadow-sm border border-transparent hover:border-lab-accent/10 transition-colors">
-          <p className="font-serif text-xl md:text-3xl leading-relaxed text-lab-text mb-6">
+          <p className="font-serif text-lg md:text-2xl leading-relaxed text-lab-text mb-6">
             We are currently focused on <span className="text-lab-accent italic">reinforcement learning</span> — from policy-gradient fundamentals to how modern <span className="text-lab-accent italic">reasoning and coding agents</span> are trained.
           </p>
           <p className="font-sans text-lab-text/70 leading-relaxed max-w-2xl">
@@ -58,13 +58,13 @@ const App: React.FC = () => {
       <Section id="connect" title="Connect">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
           <a href="https://huggingface.co/Eunice-Labs" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center md:items-start p-6 bg-lab-card shadow-sm hover:shadow-md transition-all">
-            <Image src="/hf-logo.svg" alt="" width={32} height={32} className="mb-4" />
-            <h3 className="font-serif text-lg md:text-xl mb-2">Hugging Face</h3>
+            <Image src="/hf-logo.svg" alt="" width={28} height={28} className="mb-4" />
+            <h3 className="font-serif text-base md:text-lg mb-2">Hugging Face</h3>
             <p className="text-sm text-lab-text/50 font-sans">Models, datasets & open research</p>
           </a>
           <a href="mailto:gagan@eunicelabs.com" className="group flex flex-col items-center md:items-start p-6 bg-lab-card shadow-sm hover:shadow-md transition-all">
-            <Mail className="w-8 h-8 text-lab-text mb-4 group-hover:text-lab-accent transition-colors" />
-            <h3 className="font-serif text-lg md:text-xl mb-2">Email</h3>
+            <Mail className="w-7 h-7 text-lab-text mb-4 group-hover:text-lab-accent transition-colors" />
+            <h3 className="font-serif text-base md:text-lg mb-2">Email</h3>
             <p className="text-sm text-lab-text/50 font-sans">Collaborations & inquiries</p>
           </a>
         </div>

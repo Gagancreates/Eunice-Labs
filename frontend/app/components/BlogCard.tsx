@@ -27,7 +27,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
           </div>
 
           {/* Title */}
-          <h3 className="font-serif text-2xl text-lab-text mb-3 group-hover:text-lab-accent transition-colors">
+          <h3 className="font-serif text-xl text-lab-text mb-3 group-hover:text-lab-accent transition-colors">
             {post.title}
           </h3>
 
@@ -58,7 +58,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index }) => {
               </span>
             </div>
             <ArrowUpRight
-              size={16}
+              size={15}
               className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1 group-hover:-translate-y-1"
             />
           </div>

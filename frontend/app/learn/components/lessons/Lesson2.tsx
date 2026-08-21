@@ -136,7 +136,7 @@ export const Lesson2Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Single Neuron Simulator</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Single Neuron Simulator</h3>
         <p className="text-muted text-sm">
           Adjust inputs, weights, bias, and activation function to see how a single neuron computes.
         </p>
@@ -212,7 +212,7 @@ export const Lesson2Playground = () => {
             <div className="text-muted text-xs uppercase tracking-widest mb-2">After Activation</div>
             <div style={{ color: activationInfo.color }} className="text-xs">{activationInfo.formula}</div>
             <div className="text-muted text-xs">Range: {activationInfo.range}</div>
-            <div className="text-4xl font-bold pt-1" style={{ color: activationInfo.color }}>
+            <div className="text-3xl font-bold pt-1" style={{ color: activationInfo.color }}>
               {output.toFixed(4)}
             </div>
           </div>

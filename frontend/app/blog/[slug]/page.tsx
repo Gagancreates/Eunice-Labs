@@ -107,7 +107,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           aria-label="Back to Writings"
           className="group inline-flex text-lab-accent hover:text-lab-text transition-colors mb-8 lg:mb-0 lg:absolute lg:-left-10 lg:top-[5rem]"
         >
-          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
         </Link>
 
         {/* Markdown content will have the H1 title */}
@@ -123,10 +123,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 href={`/blog/${blogPosts.find(p => p.order === post.order - 1)?.slug}`}
                 className="group flex items-center gap-2 text-lab-accent hover:text-lab-text transition-colors"
               >
-                <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
                 <div>
                   <div className="text-xs uppercase tracking-wider text-lab-text/50 mb-1">Previous</div>
-                  <div className="font-serif text-lg">
+                  <div className="font-serif text-base">
                     {blogPosts.find(p => p.order === post.order - 1)?.title}
                   </div>
                 </div>
@@ -140,11 +140,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               >
                 <div>
                   <div className="text-xs uppercase tracking-wider text-lab-text/50 mb-1">Next</div>
-                  <div className="font-serif text-lg">
+                  <div className="font-serif text-base">
                     {blogPosts.find(p => p.order === post.order + 1)?.title}
                   </div>
                 </div>
-                <ArrowLeft size={20} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+                <ArrowLeft size={18} className="rotate-180 group-hover:translate-x-1 transition-transform" />
               </Link>
             ) : <div></div>}
           </div>

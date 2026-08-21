@@ -39,7 +39,7 @@ export const Lesson8Vis = () => {
     {
       label: 'Raw Text',
       content: (
-        <div className="border border-border px-5 py-3 bg-neutral-900 text-accent font-serif text-lg">
+        <div className="border border-border px-5 py-3 bg-neutral-900 text-accent font-serif text-base">
           &quot;unbelievable&quot;
         </div>
       ),
@@ -100,7 +100,7 @@ export const Lesson8Vis = () => {
           </motion.div>
           {i < steps.length - 1 && (
             <motion.div
-              className="text-2xl text-muted"
+              className="text-xl text-muted"
               animate={{ opacity: [0.3, 1, 0.3] }}
               transition={{ duration: 3, repeat: Infinity, delay: i * 0.8 + 0.5 }}>
               →
@@ -167,7 +167,7 @@ export const Lesson8Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Tokenizer &amp; Embedding Explorer</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Tokenizer &amp; Embedding Explorer</h3>
         <p className="text-muted text-sm">
           Type a sentence to see tokens and their embedding vectors. Compare semantic similarity with any word.
         </p>
@@ -181,7 +181,7 @@ export const Lesson8Playground = () => {
               type="text"
               value={inputText}
               onChange={e => setInputText(e.target.value)}
-              className="bg-neutral-900 border border-border text-accent px-5 py-3 outline-none focus:border-accent font-serif text-lg"
+              className="bg-neutral-900 border border-border text-accent px-5 py-3 outline-none focus:border-accent font-serif text-base"
               placeholder="Type a sentence..."
             />
           </div>
@@ -208,7 +208,7 @@ export const Lesson8Playground = () => {
               const simPct = Math.round(sim * 100);
               return (
                 <div key={i} className="border border-border bg-neutral-900 p-4 flex flex-col gap-3 min-w-[160px]">
-                  <div className="text-accent font-serif text-lg text-center border-b border-border pb-2">
+                  <div className="text-accent font-serif text-base text-center border-b border-border pb-2">
                     {token.text}
                   </div>
 

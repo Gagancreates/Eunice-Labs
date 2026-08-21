@@ -81,7 +81,7 @@ export const Lesson4Vis = () => {
       </div>
 
       <div className="flex flex-col items-center gap-2 text-muted">
-        <div className="text-2xl">→</div>
+        <div className="text-xl">→</div>
         <div className="text-xs uppercase tracking-widest text-neutral-500">3×3 filter</div>
       </div>
 
@@ -179,7 +179,7 @@ export const Lesson4Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Convolution Explorer</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Convolution Explorer</h3>
         <p className="text-muted text-sm">
           Click pixels to toggle them. Select a filter to see its effect on the feature map.
         </p>

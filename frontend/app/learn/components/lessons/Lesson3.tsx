@@ -133,7 +133,7 @@ export const Lesson3Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-10">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Gradient Descent Simulator</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Gradient Descent Simulator</h3>
         <p className="text-muted text-sm">
           Minimize f(x) = x². The gradient is f′(x) = 2x. Each step moves opposite the gradient.
         </p>

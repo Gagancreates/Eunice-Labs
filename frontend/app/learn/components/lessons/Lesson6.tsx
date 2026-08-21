@@ -85,7 +85,7 @@ export const Lesson6Vis = () => {
           <span className="text-neutral-500">(scale for stability)</span>
         </motion.div>
 
-        <div className="text-muted text-lg">↓</div>
+        <div className="text-muted text-base">↓</div>
 
         <motion.div
           animate={{ opacity: [0.4, 1, 0.4] }}
@@ -95,7 +95,7 @@ export const Lesson6Vis = () => {
           </div>
         </motion.div>
 
-        <div className="text-muted text-lg">↓</div>
+        <div className="text-muted text-base">↓</div>
 
         <motion.div className="flex items-center gap-2"
           animate={{ opacity: [0.4, 1, 0.4] }}
@@ -150,7 +150,7 @@ export const Lesson6Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Self-Attention Simulator</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Self-Attention Simulator</h3>
         <p className="text-muted text-sm">
           Sentence: <em className="text-foreground">&quot;The bank river&quot;</em>. Adjust Query for &quot;bank&quot; and Keys for context
           words to see how attention weights shift.

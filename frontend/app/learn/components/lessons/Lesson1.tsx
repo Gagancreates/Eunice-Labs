@@ -41,7 +41,7 @@ export const Lesson1Vis = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-10 font-mono w-full h-full p-8">
-      <div className="flex items-center gap-8 text-xl">
+      <div className="flex items-center gap-8 text-lg">
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs text-muted uppercase tracking-widest">Row vector</span>
           <div className="flex gap-5 border-l-2 border-r-2 border-border px-6 py-4">
@@ -51,7 +51,7 @@ export const Lesson1Vis = () => {
                 style={{ color: PAIR_COLORS[i] }}
                 animate={{ opacity: [0.45, 1, 0.45] }}
                 transition={{ duration: 2, repeat: Infinity, delay: i * 0.55 }}
-                className="font-bold text-2xl"
+                className="font-bold text-xl"
               >
                 {p.a}
               </motion.span>
@@ -60,7 +60,7 @@ export const Lesson1Vis = () => {
           <span className="text-xs text-neutral-500">shape: (1, 3)</span>
         </div>
 
-        <span className="text-muted text-3xl">·</span>
+        <span className="text-muted text-2xl">·</span>
 
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs text-muted uppercase tracking-widest">Column vector</span>
@@ -71,7 +71,7 @@ export const Lesson1Vis = () => {
                 style={{ color: PAIR_COLORS[i] }}
                 animate={{ opacity: [0.45, 1, 0.45] }}
                 transition={{ duration: 2, repeat: Infinity, delay: i * 0.55 }}
-                className="font-bold text-2xl text-center"
+                className="font-bold text-xl text-center"
               >
                 {p.b}
               </motion.span>
@@ -80,12 +80,12 @@ export const Lesson1Vis = () => {
           <span className="text-xs text-neutral-500">shape: (3, 1)</span>
         </div>
 
-        <span className="text-muted text-3xl">=</span>
+        <span className="text-muted text-2xl">=</span>
 
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs text-muted uppercase tracking-widest">Scalar output</span>
           <motion.div
-            className="border-2 border-accent text-accent px-10 py-4 text-4xl font-bold"
+            className="border-2 border-accent text-accent px-10 py-4 text-3xl font-bold"
             animate={{ opacity: [0.6, 1, 0.6] }}
             transition={{ duration: 2, repeat: Infinity, delay: 1.65 }}
           >
@@ -107,7 +107,7 @@ export const Lesson1Vis = () => {
               ({p.a} × {p.b} = <strong>{p.product}</strong>)
             </motion.span>
             {i < pairs.length - 1 && (
-              <span className="text-neutral-500 text-lg font-bold">+</span>
+              <span className="text-neutral-500 text-base font-bold">+</span>
             )}
           </React.Fragment>
         ))}
@@ -140,7 +140,7 @@ export const Lesson1Playground = () => {
   return (
     <div className="flex-1 flex flex-col items-center justify-center p-10 gap-10">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">Interactive Dot Product</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">Interactive Dot Product</h3>
         <p className="text-muted text-sm">Edit any value — the result updates instantly. Watch the color-coded pairs.</p>
       </div>
 
@@ -154,7 +154,7 @@ export const Lesson1Playground = () => {
                 type="number"
                 value={val}
                 onChange={e => updateA(i, Number(e.target.value))}
-                className="w-14 bg-transparent border-b-2 text-center focus:outline-none text-xl font-bold transition-colors"
+                className="w-14 bg-transparent border-b-2 text-center focus:outline-none text-lg font-bold transition-colors"
                 style={{ color: PAIR_COLORS[i], borderColor: PAIR_COLORS[i] + '60' }}
               />
             ))}
@@ -162,7 +162,7 @@ export const Lesson1Playground = () => {
           <span className="text-xs text-neutral-500">shape: (1, 3)</span>
         </div>
 
-        <span className="text-muted text-3xl">·</span>
+        <span className="text-muted text-2xl">·</span>
 
         <div className="flex flex-col items-center gap-3">
           <span className="text-xs text-muted uppercase tracking-widest">Weights</span>
@@ -173,7 +173,7 @@ export const Lesson1Playground = () => {
                 type="number"
                 value={val}
                 onChange={e => updateB(i, Number(e.target.value))}
-                className="w-14 bg-transparent border-b-2 text-center focus:outline-none text-xl font-bold transition-colors"
+                className="w-14 bg-transparent border-b-2 text-center focus:outline-none text-lg font-bold transition-colors"
                 style={{ color: PAIR_COLORS[i], borderColor: PAIR_COLORS[i] + '60' }}
               />
             ))}
@@ -181,11 +181,11 @@ export const Lesson1Playground = () => {
           <span className="text-xs text-neutral-500">shape: (3, 1)</span>
         </div>
 
-        <span className="text-muted text-3xl">=</span>
+        <span className="text-muted text-2xl">=</span>
 
         <div className="flex flex-col items-center gap-3">
           <span className="text-xs text-muted uppercase tracking-widest">Output</span>
-          <div className="border-2 border-accent px-10 py-4 text-accent text-4xl font-bold min-w-[6rem] text-center">
+          <div className="border-2 border-accent px-10 py-4 text-accent text-3xl font-bold min-w-[6rem] text-center">
             {result}
           </div>
           <span className="text-xs text-neutral-500">shape: (1, 1)</span>

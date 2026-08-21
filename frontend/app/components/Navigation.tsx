@@ -107,7 +107,7 @@ const Navigation: React.FC = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
-          {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+          {mobileMenuOpen ? <X size={17} /> : <Menu size={17} />}
         </button>
       </div>
 

@@ -56,10 +56,10 @@ export function Roadmap() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
-            <h1 className="text-5xl md:text-7xl mb-6 text-accent font-serif leading-tight">
+            <h1 className="text-4xl md:text-6xl mb-6 text-accent font-serif leading-tight">
               Deep Learning<br />&amp; LLMs
             </h1>
-            <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed mb-6">
+            <p className="text-muted text-base md:text-lg max-w-2xl leading-relaxed mb-6">
               A progressive path through modern AI — from matrix multiplication to Transformers.
               Each concept builds on the last. See it, break it, understand it.
             </p>
@@ -134,7 +134,7 @@ export function Roadmap() {
                   </div>
 
                   <h2 className={cn(
-                    'text-xl md:text-2xl mb-2 font-serif transition-colors',
+                    'text-lg md:text-xl mb-2 font-serif transition-colors',
                     isUnlocked ? 'text-accent group-hover:text-foreground' : 'text-muted'
                   )}>
                     {lesson.title}
@@ -170,7 +170,7 @@ export function Roadmap() {
             animate={{ opacity: 1, y: 0 }}
             className="mt-8 border border-accent/30 bg-accent/5 p-6 text-center"
           >
-            <div className="text-accent text-2xl font-serif mb-2">All lessons complete.</div>
+            <div className="text-accent text-xl font-serif mb-2">All lessons complete.</div>
             <p className="text-muted text-sm">
               You&apos;ve built a foundation in deep learning. The next step: implement these concepts in code.
             </p>

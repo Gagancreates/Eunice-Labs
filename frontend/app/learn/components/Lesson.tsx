@@ -137,11 +137,11 @@ export function Lesson() {
                 <div className="mb-3 text-xs text-neutral-500 uppercase tracking-widest">
                   Lesson {lessonIndex + 1} of {lessons.length}
                 </div>
-                <h1 className="text-5xl md:text-6xl mb-10 text-accent font-serif leading-tight">
+                <h1 className="text-4xl md:text-5xl mb-10 text-accent font-serif leading-tight">
                   {lesson.title}
                 </h1>
                 <div className={cn(
-                  '[&>p]:text-muted [&>p]:text-lg [&>p]:leading-relaxed [&>p]:mb-5',
+                  '[&>p]:text-muted [&>p]:text-base [&>p]:leading-relaxed [&>p]:mb-5',
                   '[&>p>strong]:text-foreground [&>p>em]:text-foreground/80 [&>p>em]:italic',
                   '[&>p>sub]:text-[0.75em] [&>p>sup]:text-[0.75em]',
                 )}>
@@ -181,7 +181,7 @@ export function Lesson() {
             {currentStep === 3 && (
               <div className="flex-1 max-w-3xl mx-auto w-full px-6 py-16 flex flex-col">
                 <div className="flex items-center justify-between mb-10">
-                  <h2 className="text-3xl md:text-4xl text-accent font-serif">Conceptual Check</h2>
+                  <h2 className="text-2xl md:text-3xl text-accent font-serif">Conceptual Check</h2>
                   {!allQuestionsRevealed && (
                     <button
                       onClick={revealAll}
@@ -197,7 +197,7 @@ export function Lesson() {
                       <div className="text-xs text-neutral-500 uppercase tracking-widest mb-2">
                         Question {idx + 1} of {lesson.questions.length}
                       </div>
-                      <p className="text-lg md:text-xl text-accent leading-relaxed mb-5 font-serif">
+                      <p className="text-base md:text-lg text-accent leading-relaxed mb-5 font-serif">
                         {q.text}
                       </p>
 
@@ -265,7 +265,7 @@ export function Lesson() {
           {isLastStep
             ? isCompleted ? 'Next Lesson' : 'Complete Lesson'
             : 'Continue'}
-          {isLastStep && !isCompleted ? <CheckCircle2 size={14} /> : <ArrowRight size={14} />}
+          {isLastStep && !isCompleted ? <CheckCircle2 size={13} /> : <ArrowRight size={13} />}
         </button>
       </footer>
     </div>

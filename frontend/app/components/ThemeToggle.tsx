@@ -35,9 +35,9 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ withLabel = false, className 
       className={`flex items-center gap-3 text-lab-text/70 hover:text-lab-accent transition-colors ${className}`}
     >
       {dark ? (
-        <Sun className="w-[18px] h-[18px] md:w-5 md:h-5" />
+        <Sun className="w-4 h-4 md:w-[18px] md:h-[18px]" />
       ) : (
-        <Moon className="w-[18px] h-[18px] md:w-5 md:h-5" />
+        <Moon className="w-4 h-4 md:w-[18px] md:h-[18px]" />
       )}
       {withLabel && (
         <span className="text-base font-serif">{dark ? 'Light mode' : 'Dark mode'}</span>

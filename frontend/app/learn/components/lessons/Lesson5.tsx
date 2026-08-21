@@ -121,7 +121,7 @@ export const Lesson5Playground = () => {
   return (
     <div className="flex-1 flex flex-col p-10 gap-10">
       <div className="text-center">
-        <h3 className="text-2xl font-serif text-accent mb-2">The Vanishing Gradient</h3>
+        <h3 className="text-xl font-serif text-accent mb-2">The Vanishing Gradient</h3>
         <p className="text-muted text-sm">
           Adjust the recurrent weight W. See how the signal magnitude evolves over {STEPS} time steps.
           Gradient flow follows the same pattern.

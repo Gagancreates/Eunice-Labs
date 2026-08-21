@@ -48,13 +48,13 @@ export default function ExperimentsPage() {
           {experiments.map((exp) => (
             <Link key={exp.href} href={exp.href} className="group block py-6">
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-6">
-                <span className="font-serif text-lg md:text-2xl text-lab-text group-hover:text-lab-accent transition-colors">
+                <span className="font-serif text-base md:text-xl text-lab-text group-hover:text-lab-accent transition-colors">
                   {exp.title}
                 </span>
                 <span className="flex items-center gap-3 text-xs font-sans uppercase tracking-widest text-lab-text/40 shrink-0">
                   {exp.status}
                   <ArrowUpRight
-                    size={14}
+                    size={13}
                     className="text-lab-accent opacity-0 group-hover:opacity-100 transition-opacity"
                   />
                 </span>

@@ -35,7 +35,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
         .markdown-content h1 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 700;
-          font-size: 1.75rem;
+          font-size: 1.575rem;
           line-height: 1.1;
           margin-top: 1em;
           margin-bottom: 0.5em;
@@ -52,20 +52,20 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h1 {
-            font-size: 3rem;
+            font-size: 2.7rem;
           }
         }
 
         @media (min-width: 1024px) {
           .markdown-content h1 {
-            font-size: 3.25rem;
+            font-size: 2.925rem;
           }
         }
 
         .markdown-content h2 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 1.3rem;
+          font-size: 1.17rem;
           line-height: 1.3;
           margin-top: 2.5rem;
           margin-bottom: 1rem;
@@ -77,14 +77,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h2 {
-            font-size: 1.85rem;
+            font-size: 1.665rem;
           }
         }
 
         .markdown-content h3 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 0.95rem;
           line-height: 1.4;
           margin-top: 2rem;
           margin-bottom: 0.75rem;
@@ -93,14 +93,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h3 {
-            font-size: 1.45rem;
+            font-size: 1.305rem;
           }
         }
 
         .markdown-content h4 {
           font-family: var(--font-serif), 'EB Garamond', serif;
           font-weight: 500;
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           line-height: 1.4;
           margin-top: 2em;
           margin-bottom: 0.5em;
@@ -109,14 +109,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content h4 {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
           }
         }
 
         /* PARAGRAPHS */
         .markdown-content p {
           @apply font-sans;
-          font-size: 0.875rem;
+          font-size: 0.85rem;
           line-height: 1.8;
           margin-bottom: 1.25rem;
           color: #3d3d3d;
@@ -124,7 +124,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
 
         @media (min-width: 768px) {
           .markdown-content p {
-            font-size: 1.0625rem;
+            font-size: 0.9563rem;
           }
         }
 
@@ -162,14 +162,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           background: transparent;
           color: #cdd6f4;
           padding: 0;
-          font-size: 0.8rem;
+          font-size: 0.78rem;
           line-height: 1.6;
           border-radius: 0;
         }
 
         @media (min-width: 768px) {
           .markdown-content pre code {
-            font-size: 0.95rem;
+            font-size: 0.855rem;
           }
         }
 
@@ -179,14 +179,14 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           @apply font-sans;
           margin: 1.5rem 0;
           padding-left: 1.5em;
-          font-size: 0.875rem;
+          font-size: 0.85rem;
           line-height: 1.8;
         }
 
         @media (min-width: 768px) {
           .markdown-content ul,
           .markdown-content ol {
-            font-size: 1.0625rem;
+            font-size: 0.9563rem;
           }
         }
 
@@ -262,7 +262,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           width: 100%;
           border-collapse: collapse;
           margin: 2rem 0;
-          font-size: 1rem;
+          font-size: 0.9rem;
           border: 2px solid #d0d0d0;
           border-radius: 8px;
           overflow: hidden;
@@ -277,7 +277,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ content }) => {
           padding: 1rem 1.25rem;
           text-align: left;
           font-weight: 600;
-          font-size: 0.95rem;
+          font-size: 0.855rem;
           border-right: 1px solid #404040;
         }
 
